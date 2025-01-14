@@ -32,12 +32,12 @@ class ReactionsListGetResponse200Normalizer implements DenormalizerInterface, No
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ReactionsListGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\ReactionsListGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ReactionsListGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ReactionsListGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -67,12 +67,12 @@ class ReactionsListGetResponse200Normalizer implements DenormalizerInterface, No
             $object->setOk(null);
         }
         if (\array_key_exists('paging', $data) && null !== $data['paging']) {
-            $object->setPaging($this->denormalizer->denormalize($data['paging'], 'JoliCode\\Slack\\Api\\Model\\ObjsPaging', 'json', $context));
+            $object->setPaging($this->denormalizer->denormalize($data['paging'], 'JoliCode\Slack\Api\Model\ObjsPaging', 'json', $context));
         } elseif (\array_key_exists('paging', $data) && null === $data['paging']) {
             $object->setPaging(null);
         }
         if (\array_key_exists('response_metadata', $data) && null !== $data['response_metadata']) {
-            $object->setResponseMetadata($this->denormalizer->denormalize($data['response_metadata'], 'JoliCode\\Slack\\Api\\Model\\ObjsResponseMetadata', 'json', $context));
+            $object->setResponseMetadata($this->denormalizer->denormalize($data['response_metadata'], 'JoliCode\Slack\Api\Model\ObjsResponseMetadata', 'json', $context));
         } elseif (\array_key_exists('response_metadata', $data) && null === $data['response_metadata']) {
             $object->setResponseMetadata(null);
         }
@@ -102,8 +102,8 @@ class ReactionsListGetResponse200Normalizer implements DenormalizerInterface, No
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ReactionsListGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\ReactionsListGetResponse200' => false];
     }
 }

@@ -32,12 +32,12 @@ class BotsInfoGetResponse200Normalizer implements DenormalizerInterface, Normali
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\BotsInfoGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\BotsInfoGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\BotsInfoGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\BotsInfoGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -53,7 +53,7 @@ class BotsInfoGetResponse200Normalizer implements DenormalizerInterface, Normali
             return $object;
         }
         if (\array_key_exists('bot', $data) && null !== $data['bot']) {
-            $object->setBot($this->denormalizer->denormalize($data['bot'], 'JoliCode\\Slack\\Api\\Model\\BotsInfoGetResponse200Bot', 'json', $context));
+            $object->setBot($this->denormalizer->denormalize($data['bot'], 'JoliCode\Slack\Api\Model\BotsInfoGetResponse200Bot', 'json', $context));
         } elseif (\array_key_exists('bot', $data) && null === $data['bot']) {
             $object->setBot(null);
         }
@@ -78,8 +78,8 @@ class BotsInfoGetResponse200Normalizer implements DenormalizerInterface, Normali
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\BotsInfoGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\BotsInfoGetResponse200' => false];
     }
 }

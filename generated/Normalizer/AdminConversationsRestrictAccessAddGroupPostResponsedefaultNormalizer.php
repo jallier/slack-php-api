@@ -32,12 +32,12 @@ class AdminConversationsRestrictAccessAddGroupPostResponsedefaultNormalizer impl
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminConversationsRestrictAccessAddGroupPostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessAddGroupPostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminConversationsRestrictAccessAddGroupPostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessAddGroupPostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class AdminConversationsRestrictAccessAddGroupPostResponsedefaultNormalizer impl
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminConversationsRestrictAccessAddGroupPostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessAddGroupPostResponsedefault' => false];
     }
 }

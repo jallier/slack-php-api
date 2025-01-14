@@ -32,12 +32,12 @@ class ObjsMessageAttachmentsItemActionsItemNormalizer implements DenormalizerInt
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItemActionsItem' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItemActionsItem' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItemActionsItem' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItemActionsItem' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -114,8 +114,8 @@ class ObjsMessageAttachmentsItemActionsItemNormalizer implements DenormalizerInt
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItemActionsItem' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItemActionsItem' => false];
     }
 }

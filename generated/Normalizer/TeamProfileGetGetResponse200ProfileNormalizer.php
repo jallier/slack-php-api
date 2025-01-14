@@ -32,12 +32,12 @@ class TeamProfileGetGetResponse200ProfileNormalizer implements DenormalizerInter
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\TeamProfileGetGetResponse200Profile' === $type;
+        return 'JoliCode\Slack\Api\Model\TeamProfileGetGetResponse200Profile' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\TeamProfileGetGetResponse200Profile' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\TeamProfileGetGetResponse200Profile' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class TeamProfileGetGetResponse200ProfileNormalizer implements DenormalizerInter
         if (\array_key_exists('fields', $data) && null !== $data['fields']) {
             $values = [];
             foreach ($data['fields'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsTeamProfileField', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsTeamProfileField', 'json', $context);
             }
             $object->setFields($values);
         } elseif (\array_key_exists('fields', $data) && null === $data['fields']) {
@@ -80,8 +80,8 @@ class TeamProfileGetGetResponse200ProfileNormalizer implements DenormalizerInter
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\TeamProfileGetGetResponse200Profile' => false];
+        return ['JoliCode\Slack\Api\Model\TeamProfileGetGetResponse200Profile' => false];
     }
 }

@@ -32,12 +32,12 @@ class ConversationsSetTopicPostResponsedefaultNormalizer implements Denormalizer
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ConversationsSetTopicPostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\ConversationsSetTopicPostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ConversationsSetTopicPostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ConversationsSetTopicPostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -102,8 +102,8 @@ class ConversationsSetTopicPostResponsedefaultNormalizer implements Denormalizer
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ConversationsSetTopicPostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\ConversationsSetTopicPostResponsedefault' => false];
     }
 }

@@ -32,12 +32,12 @@ class FilesListGetResponse200Normalizer implements DenormalizerInterface, Normal
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\FilesListGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\FilesListGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\FilesListGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\FilesListGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class FilesListGetResponse200Normalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('files', $data) && null !== $data['files']) {
             $values = [];
             foreach ($data['files'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsFile', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsFile', 'json', $context);
             }
             $object->setFiles($values);
         } elseif (\array_key_exists('files', $data) && null === $data['files']) {
@@ -67,7 +67,7 @@ class FilesListGetResponse200Normalizer implements DenormalizerInterface, Normal
             $object->setOk(null);
         }
         if (\array_key_exists('paging', $data) && null !== $data['paging']) {
-            $object->setPaging($this->denormalizer->denormalize($data['paging'], 'JoliCode\\Slack\\Api\\Model\\ObjsPaging', 'json', $context));
+            $object->setPaging($this->denormalizer->denormalize($data['paging'], 'JoliCode\Slack\Api\Model\ObjsPaging', 'json', $context));
         } elseif (\array_key_exists('paging', $data) && null === $data['paging']) {
             $object->setPaging(null);
         }
@@ -92,8 +92,8 @@ class FilesListGetResponse200Normalizer implements DenormalizerInterface, Normal
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\FilesListGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\FilesListGetResponse200' => false];
     }
 }

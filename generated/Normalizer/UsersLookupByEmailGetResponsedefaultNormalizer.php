@@ -32,12 +32,12 @@ class UsersLookupByEmailGetResponsedefaultNormalizer implements DenormalizerInte
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsersLookupByEmailGetResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsersLookupByEmailGetResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -86,8 +86,8 @@ class UsersLookupByEmailGetResponsedefaultNormalizer implements DenormalizerInte
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsersLookupByEmailGetResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponsedefault' => false];
     }
 }

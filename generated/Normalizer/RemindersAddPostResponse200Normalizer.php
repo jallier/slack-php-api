@@ -32,12 +32,12 @@ class RemindersAddPostResponse200Normalizer implements DenormalizerInterface, No
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\RemindersAddPostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\RemindersAddPostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\RemindersAddPostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\RemindersAddPostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,7 +58,7 @@ class RemindersAddPostResponse200Normalizer implements DenormalizerInterface, No
             $object->setOk(null);
         }
         if (\array_key_exists('reminder', $data) && null !== $data['reminder']) {
-            $object->setReminder($this->denormalizer->denormalize($data['reminder'], 'JoliCode\\Slack\\Api\\Model\\ObjsReminder', 'json', $context));
+            $object->setReminder($this->denormalizer->denormalize($data['reminder'], 'JoliCode\Slack\Api\Model\ObjsReminder', 'json', $context));
         } elseif (\array_key_exists('reminder', $data) && null === $data['reminder']) {
             $object->setReminder(null);
         }
@@ -78,8 +78,8 @@ class RemindersAddPostResponse200Normalizer implements DenormalizerInterface, No
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\RemindersAddPostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\RemindersAddPostResponse200' => false];
     }
 }

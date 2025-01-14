@@ -32,12 +32,12 @@ class StarsListGetResponse200ItemsItemItem0Normalizer implements DenormalizerInt
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\StarsListGetResponse200ItemsItemItem0' === $type;
+        return 'JoliCode\Slack\Api\Model\StarsListGetResponse200ItemsItemItem0' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\StarsListGetResponse200ItemsItemItem0' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\StarsListGetResponse200ItemsItemItem0' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -63,7 +63,7 @@ class StarsListGetResponse200ItemsItemItem0Normalizer implements DenormalizerInt
             $object->setDateCreate(null);
         }
         if (\array_key_exists('message', $data) && null !== $data['message']) {
-            $object->setMessage($this->denormalizer->denormalize($data['message'], 'JoliCode\\Slack\\Api\\Model\\ObjsMessage', 'json', $context));
+            $object->setMessage($this->denormalizer->denormalize($data['message'], 'JoliCode\Slack\Api\Model\ObjsMessage', 'json', $context));
         } elseif (\array_key_exists('message', $data) && null === $data['message']) {
             $object->setMessage(null);
         }
@@ -90,8 +90,8 @@ class StarsListGetResponse200ItemsItemItem0Normalizer implements DenormalizerInt
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\StarsListGetResponse200ItemsItemItem0' => false];
+        return ['JoliCode\Slack\Api\Model\StarsListGetResponse200ItemsItemItem0' => false];
     }
 }

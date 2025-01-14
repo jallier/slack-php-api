@@ -32,12 +32,12 @@ class ObjsIconNormalizer implements DenormalizerInterface, NormalizerInterface, 
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsIcon' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsIcon' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsIcon' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsIcon' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -130,8 +130,8 @@ class ObjsIconNormalizer implements DenormalizerInterface, NormalizerInterface, 
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsIcon' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsIcon' => false];
     }
 }

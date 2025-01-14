@@ -32,12 +32,12 @@ class AdminConversationsGetConversationPrefsGetResponse200Normalizer implements 
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminConversationsGetConversationPrefsGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminConversationsGetConversationPrefsGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminConversationsGetConversationPrefsGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminConversationsGetConversationPrefsGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,7 +58,7 @@ class AdminConversationsGetConversationPrefsGetResponse200Normalizer implements 
             $object->setOk(null);
         }
         if (\array_key_exists('prefs', $data) && null !== $data['prefs']) {
-            $object->setPrefs($this->denormalizer->denormalize($data['prefs'], 'JoliCode\\Slack\\Api\\Model\\AdminConversationsGetConversationPrefsGetResponse200Prefs', 'json', $context));
+            $object->setPrefs($this->denormalizer->denormalize($data['prefs'], 'JoliCode\Slack\Api\Model\AdminConversationsGetConversationPrefsGetResponse200Prefs', 'json', $context));
         } elseif (\array_key_exists('prefs', $data) && null === $data['prefs']) {
             $object->setPrefs(null);
         }
@@ -80,8 +80,8 @@ class AdminConversationsGetConversationPrefsGetResponse200Normalizer implements 
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminConversationsGetConversationPrefsGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\AdminConversationsGetConversationPrefsGetResponse200' => false];
     }
 }

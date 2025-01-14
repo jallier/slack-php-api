@@ -32,12 +32,12 @@ class AdminConversationsSearchGetResponse200Normalizer implements DenormalizerIn
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminConversationsSearchGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminConversationsSearchGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminConversationsSearchGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminConversationsSearchGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class AdminConversationsSearchGetResponse200Normalizer implements DenormalizerIn
         if (\array_key_exists('channels', $data) && null !== $data['channels']) {
             $values = [];
             foreach ($data['channels'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsChannel', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsChannel', 'json', $context);
             }
             $object->setChannels($values);
         } elseif (\array_key_exists('channels', $data) && null === $data['channels']) {
@@ -86,8 +86,8 @@ class AdminConversationsSearchGetResponse200Normalizer implements DenormalizerIn
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminConversationsSearchGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\AdminConversationsSearchGetResponse200' => false];
     }
 }

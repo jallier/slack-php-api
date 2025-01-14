@@ -32,12 +32,12 @@ class ObjsBotProfileNormalizer implements DenormalizerInterface, NormalizerInter
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsBotProfile' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsBotProfile' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsBotProfile' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsBotProfile' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -63,7 +63,7 @@ class ObjsBotProfileNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setDeleted(null);
         }
         if (\array_key_exists('icons', $data) && null !== $data['icons']) {
-            $object->setIcons($this->denormalizer->denormalize($data['icons'], 'JoliCode\\Slack\\Api\\Model\\ObjsBotProfileIcons', 'json', $context));
+            $object->setIcons($this->denormalizer->denormalize($data['icons'], 'JoliCode\Slack\Api\Model\ObjsBotProfileIcons', 'json', $context));
         } elseif (\array_key_exists('icons', $data) && null === $data['icons']) {
             $object->setIcons(null);
         }
@@ -108,8 +108,8 @@ class ObjsBotProfileNormalizer implements DenormalizerInterface, NormalizerInter
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsBotProfile' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsBotProfile' => false];
     }
 }

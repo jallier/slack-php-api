@@ -32,12 +32,12 @@ class ObjsMessageAttachmentsItemNormalizer implements DenormalizerInterface, Nor
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItem' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItem' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItem' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItem' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class ObjsMessageAttachmentsItemNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('actions', $data) && null !== $data['actions']) {
             $values = [];
             foreach ($data['actions'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItemActionsItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItemActionsItem', 'json', $context);
             }
             $object->setActions($values);
             unset($data['actions']);
@@ -101,7 +101,7 @@ class ObjsMessageAttachmentsItemNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('fields', $data) && null !== $data['fields']) {
             $values_1 = [];
             foreach ($data['fields'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItemFieldsItem', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItemFieldsItem', 'json', $context);
             }
             $object->setFields($values_1);
             unset($data['fields']);
@@ -291,8 +291,8 @@ class ObjsMessageAttachmentsItemNormalizer implements DenormalizerInterface, Nor
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItem' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItem' => false];
     }
 }

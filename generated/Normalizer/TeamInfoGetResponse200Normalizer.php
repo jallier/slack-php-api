@@ -32,12 +32,12 @@ class TeamInfoGetResponse200Normalizer implements DenormalizerInterface, Normali
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\TeamInfoGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\TeamInfoGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\TeamInfoGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\TeamInfoGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,7 +58,7 @@ class TeamInfoGetResponse200Normalizer implements DenormalizerInterface, Normali
             $object->setOk(null);
         }
         if (\array_key_exists('team', $data) && null !== $data['team']) {
-            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\\Slack\\Api\\Model\\ObjsTeam', 'json', $context));
+            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\Slack\Api\Model\ObjsTeam', 'json', $context));
         } elseif (\array_key_exists('team', $data) && null === $data['team']) {
             $object->setTeam(null);
         }
@@ -78,8 +78,8 @@ class TeamInfoGetResponse200Normalizer implements DenormalizerInterface, Normali
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\TeamInfoGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\TeamInfoGetResponse200' => false];
     }
 }

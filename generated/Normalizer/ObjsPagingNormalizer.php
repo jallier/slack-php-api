@@ -32,12 +32,12 @@ class ObjsPagingNormalizer implements DenormalizerInterface, NormalizerInterface
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsPaging' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsPaging' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsPaging' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsPaging' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -110,8 +110,8 @@ class ObjsPagingNormalizer implements DenormalizerInterface, NormalizerInterface
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsPaging' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsPaging' => false];
     }
 }

@@ -32,12 +32,12 @@ class FilesRevokePublicURLPostResponse200Normalizer implements DenormalizerInter
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\FilesRevokePublicURLPostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\FilesRevokePublicURLPostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\FilesRevokePublicURLPostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\FilesRevokePublicURLPostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -53,7 +53,7 @@ class FilesRevokePublicURLPostResponse200Normalizer implements DenormalizerInter
             return $object;
         }
         if (\array_key_exists('file', $data) && null !== $data['file']) {
-            $object->setFile($this->denormalizer->denormalize($data['file'], 'JoliCode\\Slack\\Api\\Model\\ObjsFile', 'json', $context));
+            $object->setFile($this->denormalizer->denormalize($data['file'], 'JoliCode\Slack\Api\Model\ObjsFile', 'json', $context));
         } elseif (\array_key_exists('file', $data) && null === $data['file']) {
             $object->setFile(null);
         }
@@ -78,8 +78,8 @@ class FilesRevokePublicURLPostResponse200Normalizer implements DenormalizerInter
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\FilesRevokePublicURLPostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\FilesRevokePublicURLPostResponse200' => false];
     }
 }

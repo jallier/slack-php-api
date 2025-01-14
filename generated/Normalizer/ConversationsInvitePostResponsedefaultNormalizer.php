@@ -32,12 +32,12 @@ class ConversationsInvitePostResponsedefaultNormalizer implements DenormalizerIn
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ConversationsInvitePostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\ConversationsInvitePostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ConversationsInvitePostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ConversationsInvitePostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -65,7 +65,7 @@ class ConversationsInvitePostResponsedefaultNormalizer implements DenormalizerIn
         if (\array_key_exists('errors', $data) && null !== $data['errors']) {
             $values = [];
             foreach ($data['errors'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ConversationsInvitePostResponsedefaultErrorsItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ConversationsInvitePostResponsedefaultErrorsItem', 'json', $context);
             }
             $object->setErrors($values);
         } elseif (\array_key_exists('errors', $data) && null === $data['errors']) {
@@ -120,8 +120,8 @@ class ConversationsInvitePostResponsedefaultNormalizer implements DenormalizerIn
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ConversationsInvitePostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\ConversationsInvitePostResponsedefault' => false];
     }
 }

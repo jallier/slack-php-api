@@ -32,12 +32,12 @@ class ChatUpdatePostResponse200Normalizer implements DenormalizerInterface, Norm
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ChatUpdatePostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\ChatUpdatePostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ChatUpdatePostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ChatUpdatePostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,7 +58,7 @@ class ChatUpdatePostResponse200Normalizer implements DenormalizerInterface, Norm
             $object->setChannel(null);
         }
         if (\array_key_exists('message', $data) && null !== $data['message']) {
-            $object->setMessage($this->denormalizer->denormalize($data['message'], 'JoliCode\\Slack\\Api\\Model\\ChatUpdatePostResponse200Message', 'json', $context));
+            $object->setMessage($this->denormalizer->denormalize($data['message'], 'JoliCode\Slack\Api\Model\ChatUpdatePostResponse200Message', 'json', $context));
         } elseif (\array_key_exists('message', $data) && null === $data['message']) {
             $object->setMessage(null);
         }
@@ -96,8 +96,8 @@ class ChatUpdatePostResponse200Normalizer implements DenormalizerInterface, Norm
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ChatUpdatePostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\ChatUpdatePostResponse200' => false];
     }
 }

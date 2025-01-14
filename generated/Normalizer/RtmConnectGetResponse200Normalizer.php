@@ -32,12 +32,12 @@ class RtmConnectGetResponse200Normalizer implements DenormalizerInterface, Norma
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\RtmConnectGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\RtmConnectGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\RtmConnectGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\RtmConnectGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,12 +58,12 @@ class RtmConnectGetResponse200Normalizer implements DenormalizerInterface, Norma
             $object->setOk(null);
         }
         if (\array_key_exists('self', $data) && null !== $data['self']) {
-            $object->setSelf($this->denormalizer->denormalize($data['self'], 'JoliCode\\Slack\\Api\\Model\\RtmConnectGetResponse200Self', 'json', $context));
+            $object->setSelf($this->denormalizer->denormalize($data['self'], 'JoliCode\Slack\Api\Model\RtmConnectGetResponse200Self', 'json', $context));
         } elseif (\array_key_exists('self', $data) && null === $data['self']) {
             $object->setSelf(null);
         }
         if (\array_key_exists('team', $data) && null !== $data['team']) {
-            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\\Slack\\Api\\Model\\RtmConnectGetResponse200Team', 'json', $context));
+            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\Slack\Api\Model\RtmConnectGetResponse200Team', 'json', $context));
         } elseif (\array_key_exists('team', $data) && null === $data['team']) {
             $object->setTeam(null);
         }
@@ -90,8 +90,8 @@ class RtmConnectGetResponse200Normalizer implements DenormalizerInterface, Norma
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\RtmConnectGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\RtmConnectGetResponse200' => false];
     }
 }

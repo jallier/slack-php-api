@@ -32,12 +32,12 @@ class StarsListGetResponse200ItemsItemItem2Normalizer implements DenormalizerInt
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\StarsListGetResponse200ItemsItemItem2' === $type;
+        return 'JoliCode\Slack\Api\Model\StarsListGetResponse200ItemsItemItem2' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\StarsListGetResponse200ItemsItemItem2' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\StarsListGetResponse200ItemsItemItem2' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -53,7 +53,7 @@ class StarsListGetResponse200ItemsItemItem2Normalizer implements DenormalizerInt
             return $object;
         }
         if (\array_key_exists('comment', $data) && null !== $data['comment']) {
-            $object->setComment($this->denormalizer->denormalize($data['comment'], 'JoliCode\\Slack\\Api\\Model\\ObjsComment', 'json', $context));
+            $object->setComment($this->denormalizer->denormalize($data['comment'], 'JoliCode\Slack\Api\Model\ObjsComment', 'json', $context));
         } elseif (\array_key_exists('comment', $data) && null === $data['comment']) {
             $object->setComment(null);
         }
@@ -63,7 +63,7 @@ class StarsListGetResponse200ItemsItemItem2Normalizer implements DenormalizerInt
             $object->setDateCreate(null);
         }
         if (\array_key_exists('file', $data) && null !== $data['file']) {
-            $object->setFile($this->denormalizer->denormalize($data['file'], 'JoliCode\\Slack\\Api\\Model\\ObjsFile', 'json', $context));
+            $object->setFile($this->denormalizer->denormalize($data['file'], 'JoliCode\Slack\Api\Model\ObjsFile', 'json', $context));
         } elseif (\array_key_exists('file', $data) && null === $data['file']) {
             $object->setFile(null);
         }
@@ -90,8 +90,8 @@ class StarsListGetResponse200ItemsItemItem2Normalizer implements DenormalizerInt
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\StarsListGetResponse200ItemsItemItem2' => false];
+        return ['JoliCode\Slack\Api\Model\StarsListGetResponse200ItemsItemItem2' => false];
     }
 }

@@ -32,12 +32,12 @@ class AdminUsersSetOwnerPostResponsedefaultNormalizer implements DenormalizerInt
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminUsersSetOwnerPostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminUsersSetOwnerPostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminUsersSetOwnerPostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminUsersSetOwnerPostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class AdminUsersSetOwnerPostResponsedefaultNormalizer implements DenormalizerInt
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminUsersSetOwnerPostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\AdminUsersSetOwnerPostResponsedefault' => false];
     }
 }

@@ -32,12 +32,12 @@ class ObjsTeamNormalizer implements DenormalizerInterface, NormalizerInterface, 
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsTeam' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsTeam' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsTeam' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsTeam' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -112,7 +112,7 @@ class ObjsTeamNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setEnterpriseName(null);
         }
         if (\array_key_exists('external_org_migrations', $data) && null !== $data['external_org_migrations']) {
-            $object->setExternalOrgMigrations($this->denormalizer->denormalize($data['external_org_migrations'], 'JoliCode\\Slack\\Api\\Model\\ObjsExternalOrgMigrations', 'json', $context));
+            $object->setExternalOrgMigrations($this->denormalizer->denormalize($data['external_org_migrations'], 'JoliCode\Slack\Api\Model\ObjsExternalOrgMigrations', 'json', $context));
         } elseif (\array_key_exists('external_org_migrations', $data) && null === $data['external_org_migrations']) {
             $object->setExternalOrgMigrations(null);
         }
@@ -122,7 +122,7 @@ class ObjsTeamNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setHasComplianceExport(null);
         }
         if (\array_key_exists('icon', $data) && null !== $data['icon']) {
-            $object->setIcon($this->denormalizer->denormalize($data['icon'], 'JoliCode\\Slack\\Api\\Model\\ObjsIcon', 'json', $context));
+            $object->setIcon($this->denormalizer->denormalize($data['icon'], 'JoliCode\Slack\Api\Model\ObjsIcon', 'json', $context));
         } elseif (\array_key_exists('icon', $data) && null === $data['icon']) {
             $object->setIcon(null);
         }
@@ -192,12 +192,12 @@ class ObjsTeamNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setPlan(null);
         }
         if (\array_key_exists('primary_owner', $data) && null !== $data['primary_owner']) {
-            $object->setPrimaryOwner($this->denormalizer->denormalize($data['primary_owner'], 'JoliCode\\Slack\\Api\\Model\\ObjsPrimaryOwner', 'json', $context));
+            $object->setPrimaryOwner($this->denormalizer->denormalize($data['primary_owner'], 'JoliCode\Slack\Api\Model\ObjsPrimaryOwner', 'json', $context));
         } elseif (\array_key_exists('primary_owner', $data) && null === $data['primary_owner']) {
             $object->setPrimaryOwner(null);
         }
         if (\array_key_exists('sso_provider', $data) && null !== $data['sso_provider']) {
-            $object->setSsoProvider($this->denormalizer->denormalize($data['sso_provider'], 'JoliCode\\Slack\\Api\\Model\\ObjsTeamSsoProvider', 'json', $context));
+            $object->setSsoProvider($this->denormalizer->denormalize($data['sso_provider'], 'JoliCode\Slack\Api\Model\ObjsTeamSsoProvider', 'json', $context));
         } elseif (\array_key_exists('sso_provider', $data) && null === $data['sso_provider']) {
             $object->setSsoProvider(null);
         }
@@ -296,8 +296,8 @@ class ObjsTeamNormalizer implements DenormalizerInterface, NormalizerInterface, 
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsTeam' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsTeam' => false];
     }
 }

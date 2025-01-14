@@ -32,12 +32,12 @@ class UsersLookupByEmailGetResponse200Normalizer implements DenormalizerInterfac
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsersLookupByEmailGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsersLookupByEmailGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -59,7 +59,7 @@ class UsersLookupByEmailGetResponse200Normalizer implements DenormalizerInterfac
             $object->setOk(null);
         }
         if (\array_key_exists('user', $data) && null !== $data['user']) {
-            $object->setUser($this->denormalizer->denormalize($data['user'], 'JoliCode\\Slack\\Api\\Model\\ObjsUser', 'json', $context));
+            $object->setUser($this->denormalizer->denormalize($data['user'], 'JoliCode\Slack\Api\Model\ObjsUser', 'json', $context));
             unset($data['user']);
         } elseif (\array_key_exists('user', $data) && null === $data['user']) {
             $object->setUser(null);
@@ -90,8 +90,8 @@ class UsersLookupByEmailGetResponse200Normalizer implements DenormalizerInterfac
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsersLookupByEmailGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponse200' => false];
     }
 }

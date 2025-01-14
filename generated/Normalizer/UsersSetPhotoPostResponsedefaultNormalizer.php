@@ -32,12 +32,12 @@ class UsersSetPhotoPostResponsedefaultNormalizer implements DenormalizerInterfac
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsersSetPhotoPostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\UsersSetPhotoPostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsersSetPhotoPostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsersSetPhotoPostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -110,8 +110,8 @@ class UsersSetPhotoPostResponsedefaultNormalizer implements DenormalizerInterfac
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsersSetPhotoPostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\UsersSetPhotoPostResponsedefault' => false];
     }
 }

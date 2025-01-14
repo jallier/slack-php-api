@@ -32,12 +32,12 @@ class UsersIdentityGetResponse200Item0UserNormalizer implements DenormalizerInte
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item0User' === $type;
+        return 'JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item0User' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item0User' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item0User' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -78,8 +78,8 @@ class UsersIdentityGetResponse200Item0UserNormalizer implements DenormalizerInte
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item0User' => false];
+        return ['JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item0User' => false];
     }
 }

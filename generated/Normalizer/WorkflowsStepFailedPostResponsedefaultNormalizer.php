@@ -32,12 +32,12 @@ class WorkflowsStepFailedPostResponsedefaultNormalizer implements DenormalizerIn
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\WorkflowsStepFailedPostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\WorkflowsStepFailedPostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\WorkflowsStepFailedPostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\WorkflowsStepFailedPostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class WorkflowsStepFailedPostResponsedefaultNormalizer implements DenormalizerIn
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\WorkflowsStepFailedPostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\WorkflowsStepFailedPostResponsedefault' => false];
     }
 }

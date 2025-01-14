@@ -32,12 +32,12 @@ class AdminConversationsGetTeamsGetResponse200Normalizer implements Denormalizer
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminConversationsGetTeamsGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminConversationsGetTeamsGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminConversationsGetTeamsGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminConversationsGetTeamsGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,7 +58,7 @@ class AdminConversationsGetTeamsGetResponse200Normalizer implements Denormalizer
             $object->setOk(null);
         }
         if (\array_key_exists('response_metadata', $data) && null !== $data['response_metadata']) {
-            $object->setResponseMetadata($this->denormalizer->denormalize($data['response_metadata'], 'JoliCode\\Slack\\Api\\Model\\AdminConversationsGetTeamsGetResponse200ResponseMetadata', 'json', $context));
+            $object->setResponseMetadata($this->denormalizer->denormalize($data['response_metadata'], 'JoliCode\Slack\Api\Model\AdminConversationsGetTeamsGetResponse200ResponseMetadata', 'json', $context));
         } elseif (\array_key_exists('response_metadata', $data) && null === $data['response_metadata']) {
             $object->setResponseMetadata(null);
         }
@@ -94,8 +94,8 @@ class AdminConversationsGetTeamsGetResponse200Normalizer implements Denormalizer
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminConversationsGetTeamsGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\AdminConversationsGetTeamsGetResponse200' => false];
     }
 }

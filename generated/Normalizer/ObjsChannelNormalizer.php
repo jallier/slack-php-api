@@ -32,12 +32,12 @@ class ObjsChannelNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsChannel' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsChannel' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsChannel' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsChannel' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -203,12 +203,12 @@ class ObjsChannelNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setPriority(null);
         }
         if (\array_key_exists('purpose', $data) && null !== $data['purpose']) {
-            $object->setPurpose($this->denormalizer->denormalize($data['purpose'], 'JoliCode\\Slack\\Api\\Model\\ObjsChannelPurpose', 'json', $context));
+            $object->setPurpose($this->denormalizer->denormalize($data['purpose'], 'JoliCode\Slack\Api\Model\ObjsChannelPurpose', 'json', $context));
         } elseif (\array_key_exists('purpose', $data) && null === $data['purpose']) {
             $object->setPurpose(null);
         }
         if (\array_key_exists('topic', $data) && null !== $data['topic']) {
-            $object->setTopic($this->denormalizer->denormalize($data['topic'], 'JoliCode\\Slack\\Api\\Model\\ObjsChannelTopic', 'json', $context));
+            $object->setTopic($this->denormalizer->denormalize($data['topic'], 'JoliCode\Slack\Api\Model\ObjsChannelTopic', 'json', $context));
         } elseif (\array_key_exists('topic', $data) && null === $data['topic']) {
             $object->setTopic(null);
         }
@@ -323,8 +323,8 @@ class ObjsChannelNormalizer implements DenormalizerInterface, NormalizerInterfac
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsChannel' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsChannel' => false];
     }
 }

@@ -32,12 +32,12 @@ class ObjsCommentNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsComment' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsComment' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsComment' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsComment' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -99,7 +99,7 @@ class ObjsCommentNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('reactions', $data) && null !== $data['reactions']) {
             $values_1 = [];
             foreach ($data['reactions'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'JoliCode\\Slack\\Api\\Model\\ObjsReaction', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'JoliCode\Slack\Api\Model\ObjsReaction', 'json', $context);
             }
             $object->setReactions($values_1);
         } elseif (\array_key_exists('reactions', $data) && null === $data['reactions']) {
@@ -170,8 +170,8 @@ class ObjsCommentNormalizer implements DenormalizerInterface, NormalizerInterfac
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsComment' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsComment' => false];
     }
 }

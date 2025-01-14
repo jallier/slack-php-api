@@ -32,12 +32,12 @@ class EmojiListGetResponsedefaultNormalizer implements DenormalizerInterface, No
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\EmojiListGetResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\EmojiListGetResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\EmojiListGetResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\EmojiListGetResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class EmojiListGetResponsedefaultNormalizer implements DenormalizerInterface, No
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\EmojiListGetResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\EmojiListGetResponsedefault' => false];
     }
 }

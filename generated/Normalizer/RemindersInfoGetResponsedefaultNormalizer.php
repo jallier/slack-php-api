@@ -32,12 +32,12 @@ class RemindersInfoGetResponsedefaultNormalizer implements DenormalizerInterface
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\RemindersInfoGetResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\RemindersInfoGetResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\RemindersInfoGetResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\RemindersInfoGetResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -86,8 +86,8 @@ class RemindersInfoGetResponsedefaultNormalizer implements DenormalizerInterface
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\RemindersInfoGetResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\RemindersInfoGetResponsedefault' => false];
     }
 }

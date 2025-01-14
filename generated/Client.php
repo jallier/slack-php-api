@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace JoliCode\Slack\Api;
 
-class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
+class Client extends Runtime\Client\Client
 {
     /**
      * Approve an app for installation on a workspace.
@@ -32,11 +32,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminAppsApprovePostResponse200|\JoliCode\Slack\Api\Model\AdminAppsApprovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminAppsApprovePostResponse200|Model\AdminAppsApprovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminAppsApprove(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminAppsApprove($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminAppsApprove($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -53,11 +53,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminAppsApprovedListGetResponse200|\JoliCode\Slack\Api\Model\AdminAppsApprovedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminAppsApprovedListGetResponse200|Model\AdminAppsApprovedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminAppsApprovedList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminAppsApprovedList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminAppsApprovedList($queryParameters), $fetch);
     }
 
     /**
@@ -73,11 +73,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminAppsRequestsListGetResponse200|\JoliCode\Slack\Api\Model\AdminAppsRequestsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminAppsRequestsListGetResponse200|Model\AdminAppsRequestsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminAppsRequestsList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminAppsRequestsList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminAppsRequestsList($queryParameters), $fetch);
     }
 
     /**
@@ -97,11 +97,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminAppsRestrictPostResponse200|\JoliCode\Slack\Api\Model\AdminAppsRestrictPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminAppsRestrictPostResponse200|Model\AdminAppsRestrictPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminAppsRestrict(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminAppsRestrict($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminAppsRestrict($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -118,11 +118,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminAppsRestrictedListGetResponse200|\JoliCode\Slack\Api\Model\AdminAppsRestrictedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminAppsRestrictedListGetResponse200|Model\AdminAppsRestrictedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminAppsRestrictedList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminAppsRestrictedList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminAppsRestrictedList($queryParameters), $fetch);
     }
 
     /**
@@ -140,11 +140,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsArchivePostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsArchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsArchivePostResponse200|Model\AdminConversationsArchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsArchive(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsArchive($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsArchive($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -162,11 +162,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsConvertToPrivatePostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsConvertToPrivatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsConvertToPrivatePostResponse200|Model\AdminConversationsConvertToPrivatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsConvertToPrivate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsConvertToPrivate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsConvertToPrivate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -188,11 +188,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsCreatePostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsCreatePostResponse200|Model\AdminConversationsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsCreate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsCreate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsCreate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -210,11 +210,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsDeletePostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsDeletePostResponse200|Model\AdminConversationsDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsDelete(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsDelete($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsDelete($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -233,11 +233,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsDisconnectSharedPostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsDisconnectSharedPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsDisconnectSharedPostResponse200|Model\AdminConversationsDisconnectSharedPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsDisconnectShared(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsDisconnectShared($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsDisconnectShared($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -254,11 +254,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsEkmListOriginalConnectedChannelInfoGetResponse200|\JoliCode\Slack\Api\Model\AdminConversationsEkmListOriginalConnectedChannelInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsEkmListOriginalConnectedChannelInfoGetResponse200|Model\AdminConversationsEkmListOriginalConnectedChannelInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsEkmListOriginalConnectedChannelInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsEkmListOriginalConnectedChannelInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsEkmListOriginalConnectedChannelInfo($queryParameters), $fetch);
     }
 
     /**
@@ -276,11 +276,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsGetConversationPrefsGetResponse200|\JoliCode\Slack\Api\Model\AdminConversationsGetConversationPrefsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsGetConversationPrefsGetResponse200|Model\AdminConversationsGetConversationPrefsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsGetConversationPrefs(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsGetConversationPrefs($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsGetConversationPrefs($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -300,11 +300,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsGetTeamsGetResponse200|\JoliCode\Slack\Api\Model\AdminConversationsGetTeamsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsGetTeamsGetResponse200|Model\AdminConversationsGetTeamsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsGetTeams(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsGetTeams($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsGetTeams($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -323,11 +323,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsInvitePostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsInvitePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsInvitePostResponse200|Model\AdminConversationsInvitePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsInvite(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsInvite($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsInvite($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -346,11 +346,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsRenamePostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsRenamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsRenamePostResponse200|Model\AdminConversationsRenamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsRename(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsRename($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsRename($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -366,11 +366,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessAddGroupPostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessAddGroupPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsRestrictAccessAddGroupPostResponse200|Model\AdminConversationsRestrictAccessAddGroupPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsRestrictAccessAddGroup(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsRestrictAccessAddGroup($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsRestrictAccessAddGroup($formParameters), $fetch);
     }
 
     /**
@@ -385,11 +385,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessListGroupsGetResponse200|\JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessListGroupsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsRestrictAccessListGroupsGetResponse200|Model\AdminConversationsRestrictAccessListGroupsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsRestrictAccessListGroups(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsRestrictAccessListGroups($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsRestrictAccessListGroups($queryParameters), $fetch);
     }
 
     /**
@@ -405,11 +405,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessRemoveGroupPostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsRestrictAccessRemoveGroupPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsRestrictAccessRemoveGroupPostResponse200|Model\AdminConversationsRestrictAccessRemoveGroupPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsRestrictAccessRemoveGroup(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsRestrictAccessRemoveGroup($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsRestrictAccessRemoveGroup($formParameters), $fetch);
     }
 
     /**
@@ -433,11 +433,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsSearchGetResponse200|\JoliCode\Slack\Api\Model\AdminConversationsSearchGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsSearchGetResponse200|Model\AdminConversationsSearchGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsSearch(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsSearch($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsSearch($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -456,11 +456,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsSetConversationPrefsPostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsSetConversationPrefsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsSetConversationPrefsPostResponse200|Model\AdminConversationsSetConversationPrefsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsSetConversationPrefs(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsSetConversationPrefs($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsSetConversationPrefs($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -481,11 +481,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsSetTeamsPostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsSetTeamsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsSetTeamsPostResponse200|Model\AdminConversationsSetTeamsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsSetTeams(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsSetTeams($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsSetTeams($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -503,11 +503,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminConversationsUnarchivePostResponse200|\JoliCode\Slack\Api\Model\AdminConversationsUnarchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminConversationsUnarchivePostResponse200|Model\AdminConversationsUnarchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminConversationsUnarchive(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminConversationsUnarchive($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminConversationsUnarchive($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -522,11 +522,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminEmojiAddPostResponse200|\JoliCode\Slack\Api\Model\AdminEmojiAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminEmojiAddPostResponse200|Model\AdminEmojiAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminEmojiAdd(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminEmojiAdd($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminEmojiAdd($formParameters), $fetch);
     }
 
     /**
@@ -541,11 +541,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminEmojiAddAliasPostResponse200|\JoliCode\Slack\Api\Model\AdminEmojiAddAliasPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminEmojiAddAliasPostResponse200|Model\AdminEmojiAddAliasPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminEmojiAddAlias(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminEmojiAddAlias($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminEmojiAddAlias($formParameters), $fetch);
     }
 
     /**
@@ -560,11 +560,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminEmojiListGetResponse200|\JoliCode\Slack\Api\Model\AdminEmojiListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminEmojiListGetResponse200|Model\AdminEmojiListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminEmojiList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminEmojiList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminEmojiList($queryParameters), $fetch);
     }
 
     /**
@@ -578,11 +578,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminEmojiRemovePostResponse200|\JoliCode\Slack\Api\Model\AdminEmojiRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminEmojiRemovePostResponse200|Model\AdminEmojiRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminEmojiRemove(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminEmojiRemove($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminEmojiRemove($formParameters), $fetch);
     }
 
     /**
@@ -597,11 +597,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminEmojiRenamePostResponse200|\JoliCode\Slack\Api\Model\AdminEmojiRenamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminEmojiRenamePostResponse200|Model\AdminEmojiRenamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminEmojiRename(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminEmojiRename($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminEmojiRename($formParameters), $fetch);
     }
 
     /**
@@ -620,11 +620,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminInviteRequestsApprovePostResponse200|\JoliCode\Slack\Api\Model\AdminInviteRequestsApprovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminInviteRequestsApprovePostResponse200|Model\AdminInviteRequestsApprovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminInviteRequestsApprove(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminInviteRequestsApprove($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminInviteRequestsApprove($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -644,11 +644,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminInviteRequestsApprovedListGetResponse200|\JoliCode\Slack\Api\Model\AdminInviteRequestsApprovedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminInviteRequestsApprovedListGetResponse200|Model\AdminInviteRequestsApprovedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminInviteRequestsApprovedList(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminInviteRequestsApprovedList($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminInviteRequestsApprovedList($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -668,11 +668,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminInviteRequestsDeniedListGetResponse200|\JoliCode\Slack\Api\Model\AdminInviteRequestsDeniedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminInviteRequestsDeniedListGetResponse200|Model\AdminInviteRequestsDeniedListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminInviteRequestsDeniedList(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminInviteRequestsDeniedList($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminInviteRequestsDeniedList($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -691,11 +691,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminInviteRequestsDenyPostResponse200|\JoliCode\Slack\Api\Model\AdminInviteRequestsDenyPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminInviteRequestsDenyPostResponse200|Model\AdminInviteRequestsDenyPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminInviteRequestsDeny(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminInviteRequestsDeny($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminInviteRequestsDeny($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -715,11 +715,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminInviteRequestsListGetResponse200|\JoliCode\Slack\Api\Model\AdminInviteRequestsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminInviteRequestsListGetResponse200|Model\AdminInviteRequestsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminInviteRequestsList(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminInviteRequestsList($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminInviteRequestsList($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -735,11 +735,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsAdminsListGetResponse200|\JoliCode\Slack\Api\Model\AdminTeamsAdminsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsAdminsListGetResponse200|Model\AdminTeamsAdminsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsAdminsList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsAdminsList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsAdminsList($queryParameters), $fetch);
     }
 
     /**
@@ -760,11 +760,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsCreatePostResponse200|\JoliCode\Slack\Api\Model\AdminTeamsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsCreatePostResponse200|Model\AdminTeamsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsCreate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsCreate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsCreate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -783,11 +783,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsListGetResponse200|\JoliCode\Slack\Api\Model\AdminTeamsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsListGetResponse200|Model\AdminTeamsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsList(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsList($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsList($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -803,11 +803,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsOwnersListGetResponse200|\JoliCode\Slack\Api\Model\AdminTeamsOwnersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsOwnersListGetResponse200|Model\AdminTeamsOwnersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsOwnersList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsOwnersList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsOwnersList($queryParameters), $fetch);
     }
 
     /**
@@ -825,11 +825,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsSettingsInfoGetResponse200|\JoliCode\Slack\Api\Model\AdminTeamsSettingsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsSettingsInfoGetResponse200|Model\AdminTeamsSettingsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsSettingsInfo(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsSettingsInfo($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsSettingsInfo($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -844,11 +844,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDefaultChannelsPostResponse200|\JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDefaultChannelsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsSettingsSetDefaultChannelsPostResponse200|Model\AdminTeamsSettingsSetDefaultChannelsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsSettingsSetDefaultChannels(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsSettingsSetDefaultChannels($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsSettingsSetDefaultChannels($formParameters), $fetch);
     }
 
     /**
@@ -867,11 +867,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDescriptionPostResponse200|\JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDescriptionPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsSettingsSetDescriptionPostResponse200|Model\AdminTeamsSettingsSetDescriptionPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsSettingsSetDescription(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsSettingsSetDescription($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsSettingsSetDescription($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -890,11 +890,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDiscoverabilityPostResponse200|\JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDiscoverabilityPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsSettingsSetDiscoverabilityPostResponse200|Model\AdminTeamsSettingsSetDiscoverabilityPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsSettingsSetDiscoverability(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsSettingsSetDiscoverability($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsSettingsSetDiscoverability($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -909,11 +909,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsSettingsSetIconPostResponse200|\JoliCode\Slack\Api\Model\AdminTeamsSettingsSetIconPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsSettingsSetIconPostResponse200|Model\AdminTeamsSettingsSetIconPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsSettingsSetIcon(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsSettingsSetIcon($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsSettingsSetIcon($formParameters), $fetch);
     }
 
     /**
@@ -932,11 +932,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminTeamsSettingsSetNamePostResponse200|\JoliCode\Slack\Api\Model\AdminTeamsSettingsSetNamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminTeamsSettingsSetNamePostResponse200|Model\AdminTeamsSettingsSetNamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminTeamsSettingsSetName(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminTeamsSettingsSetName($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminTeamsSettingsSetName($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -956,11 +956,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsergroupsAddChannelsPostResponse200|\JoliCode\Slack\Api\Model\AdminUsergroupsAddChannelsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsergroupsAddChannelsPostResponse200|Model\AdminUsergroupsAddChannelsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsergroupsAddChannels(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsergroupsAddChannels($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsergroupsAddChannels($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -980,11 +980,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsergroupsAddTeamsPostResponse200|\JoliCode\Slack\Api\Model\AdminUsergroupsAddTeamsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsergroupsAddTeamsPostResponse200|Model\AdminUsergroupsAddTeamsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsergroupsAddTeams(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsergroupsAddTeams($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsergroupsAddTeams($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1004,11 +1004,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsergroupsListChannelsGetResponse200|\JoliCode\Slack\Api\Model\AdminUsergroupsListChannelsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsergroupsListChannelsGetResponse200|Model\AdminUsergroupsListChannelsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsergroupsListChannels(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsergroupsListChannels($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsergroupsListChannels($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1027,11 +1027,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsergroupsRemoveChannelsPostResponse200|\JoliCode\Slack\Api\Model\AdminUsergroupsRemoveChannelsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsergroupsRemoveChannelsPostResponse200|Model\AdminUsergroupsRemoveChannelsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsergroupsRemoveChannels(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsergroupsRemoveChannels($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsergroupsRemoveChannels($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1053,11 +1053,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersAssignPostResponse200|\JoliCode\Slack\Api\Model\AdminUsersAssignPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersAssignPostResponse200|Model\AdminUsersAssignPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersAssign(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersAssign($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersAssign($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1083,11 +1083,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersInvitePostResponse200|\JoliCode\Slack\Api\Model\AdminUsersInvitePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersInvitePostResponse200|Model\AdminUsersInvitePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersInvite(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersInvite($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersInvite($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1107,11 +1107,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersListGetResponse200|\JoliCode\Slack\Api\Model\AdminUsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersListGetResponse200|Model\AdminUsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersList(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersList($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersList($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1130,11 +1130,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersRemovePostResponse200|\JoliCode\Slack\Api\Model\AdminUsersRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersRemovePostResponse200|Model\AdminUsersRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersRemove(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersRemove($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersRemove($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1153,11 +1153,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersSessionInvalidatePostResponse200|\JoliCode\Slack\Api\Model\AdminUsersSessionInvalidatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersSessionInvalidatePostResponse200|Model\AdminUsersSessionInvalidatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersSessionInvalidate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersSessionInvalidate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersSessionInvalidate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1177,11 +1177,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersSessionResetPostResponse200|\JoliCode\Slack\Api\Model\AdminUsersSessionResetPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersSessionResetPostResponse200|Model\AdminUsersSessionResetPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersSessionReset(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersSessionReset($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersSessionReset($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1200,11 +1200,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersSetAdminPostResponse200|\JoliCode\Slack\Api\Model\AdminUsersSetAdminPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersSetAdminPostResponse200|Model\AdminUsersSetAdminPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersSetAdmin(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersSetAdmin($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersSetAdmin($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1224,11 +1224,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersSetExpirationPostResponse200|\JoliCode\Slack\Api\Model\AdminUsersSetExpirationPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersSetExpirationPostResponse200|Model\AdminUsersSetExpirationPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersSetExpiration(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersSetExpiration($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersSetExpiration($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1247,11 +1247,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersSetOwnerPostResponse200|\JoliCode\Slack\Api\Model\AdminUsersSetOwnerPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersSetOwnerPostResponse200|Model\AdminUsersSetOwnerPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersSetOwner(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersSetOwner($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersSetOwner($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1270,11 +1270,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AdminUsersSetRegularPostResponse200|\JoliCode\Slack\Api\Model\AdminUsersSetRegularPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AdminUsersSetRegularPostResponse200|Model\AdminUsersSetRegularPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function adminUsersSetRegular(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AdminUsersSetRegular($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AdminUsersSetRegular($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1288,11 +1288,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ApiTestGetResponse200|\JoliCode\Slack\Api\Model\ApiTestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ApiTestGetResponse200|Model\ApiTestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function apiTest(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ApiTest($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ApiTest($queryParameters), $fetch);
     }
 
     /**
@@ -1312,11 +1312,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsEventAuthorizationsListGetResponse200|\JoliCode\Slack\Api\Model\AppsEventAuthorizationsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsEventAuthorizationsListGetResponse200|Model\AppsEventAuthorizationsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsEventAuthorizationsList(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsEventAuthorizationsList($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsEventAuthorizationsList($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1329,11 +1329,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsPermissionsInfoGetResponse200|\JoliCode\Slack\Api\Model\AppsPermissionsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsPermissionsInfoGetResponse200|Model\AppsPermissionsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsPermissionsInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsPermissionsInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsPermissionsInfo($queryParameters), $fetch);
     }
 
     /**
@@ -1348,11 +1348,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsPermissionsRequestGetResponse200|\JoliCode\Slack\Api\Model\AppsPermissionsRequestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsPermissionsRequestGetResponse200|Model\AppsPermissionsRequestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsPermissionsRequest(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsPermissionsRequest($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsPermissionsRequest($queryParameters), $fetch);
     }
 
     /**
@@ -1367,11 +1367,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsPermissionsResourcesListGetResponse200|\JoliCode\Slack\Api\Model\AppsPermissionsResourcesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsPermissionsResourcesListGetResponse200|Model\AppsPermissionsResourcesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsPermissionsResourcesList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsPermissionsResourcesList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsPermissionsResourcesList($queryParameters), $fetch);
     }
 
     /**
@@ -1384,11 +1384,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsPermissionsScopesListGetResponse200|\JoliCode\Slack\Api\Model\AppsPermissionsScopesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsPermissionsScopesListGetResponse200|Model\AppsPermissionsScopesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsPermissionsScopesList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsPermissionsScopesList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsPermissionsScopesList($queryParameters), $fetch);
     }
 
     /**
@@ -1403,11 +1403,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsPermissionsUsersListGetResponse200|\JoliCode\Slack\Api\Model\AppsPermissionsUsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsPermissionsUsersListGetResponse200|Model\AppsPermissionsUsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsPermissionsUsersList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsPermissionsUsersList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsPermissionsUsersList($queryParameters), $fetch);
     }
 
     /**
@@ -1423,11 +1423,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsPermissionsUsersRequestGetResponse200|\JoliCode\Slack\Api\Model\AppsPermissionsUsersRequestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsPermissionsUsersRequestGetResponse200|Model\AppsPermissionsUsersRequestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsPermissionsUsersRequest(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsPermissionsUsersRequest($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsPermissionsUsersRequest($queryParameters), $fetch);
     }
 
     /**
@@ -1442,11 +1442,53 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AppsUninstallGetResponse200|\JoliCode\Slack\Api\Model\AppsUninstallGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AppsUninstallGetResponse200|Model\AppsUninstallGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function appsUninstall(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AppsUninstall($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AppsUninstall($queryParameters), $fetch);
+    }
+
+    /**
+     * Set the status for an AI assistant thread.
+     *
+     * @param array $formParameters {
+     *
+     * @var string $channel_id Channel ID containing the assistant thread
+     * @var string $status Status of the specified bot user, e.g. 'is thinking...'
+     * @var string $thread_ts Message timestamp of the thread of where to set the status.
+     *             }
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $token Authentication token. Requires scope: `assistant:write`
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\AssistantThreadsSetStatusPostResponse200|Model\AssistantThreadsSetStatusPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     */
+    public function postAssistantThreadsSetStatus(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\PostAssistantThreadsSetStatus($formParameters, $headerParameters), $fetch);
+    }
+
+    /**
+     * Set the status for an AI assistant thread.
+     *
+     * @param array $prompts          each prompt should be supplied with its title and message attribute
+     * @param array $headerParameters {
+     *
+     * @var string $token Authentication token. Requires scope: `assistant:write`
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\AssistantThreadsSetSuggestedPromptsPostResponse200|Model\AssistantThreadsSetSuggestedPromptsPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     */
+    public function postAssistantThreadsSetSuggestedPrompt(array $prompts, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\PostAssistantThreadsSetSuggestedPrompt($prompts, $headerParameters), $fetch);
     }
 
     /**
@@ -1460,11 +1502,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AuthRevokeGetResponse200|\JoliCode\Slack\Api\Model\AuthRevokeGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AuthRevokeGetResponse200|Model\AuthRevokeGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function authRevoke(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AuthRevoke($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AuthRevoke($queryParameters), $fetch);
     }
 
     /**
@@ -1477,11 +1519,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\AuthTestGetResponse200|\JoliCode\Slack\Api\Model\AuthTestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\AuthTestGetResponse200|Model\AuthTestGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function authTest(array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\AuthTest($headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\AuthTest($headerParameters), $fetch);
     }
 
     /**
@@ -1495,11 +1537,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\BotsInfoGetResponse200|\JoliCode\Slack\Api\Model\BotsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\BotsInfoGetResponse200|Model\BotsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function botsInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\BotsInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\BotsInfo($queryParameters), $fetch);
     }
 
     /**
@@ -1524,11 +1566,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\CallsAddPostResponse200|\JoliCode\Slack\Api\Model\CallsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\CallsAddPostResponse200|Model\CallsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function callsAdd(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\CallsAdd($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\CallsAdd($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1547,11 +1589,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\CallsEndPostResponse200|\JoliCode\Slack\Api\Model\CallsEndPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\CallsEndPostResponse200|Model\CallsEndPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function callsEnd(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\CallsEnd($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\CallsEnd($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1569,11 +1611,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\CallsInfoGetResponse200|\JoliCode\Slack\Api\Model\CallsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\CallsInfoGetResponse200|Model\CallsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function callsInfo(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\CallsInfo($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\CallsInfo($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1592,11 +1634,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\CallsParticipantsAddPostResponse200|\JoliCode\Slack\Api\Model\CallsParticipantsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\CallsParticipantsAddPostResponse200|Model\CallsParticipantsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function callsParticipantsAdd(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\CallsParticipantsAdd($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\CallsParticipantsAdd($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1615,11 +1657,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\CallsParticipantsRemovePostResponse200|\JoliCode\Slack\Api\Model\CallsParticipantsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\CallsParticipantsRemovePostResponse200|Model\CallsParticipantsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function callsParticipantsRemove(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\CallsParticipantsRemove($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\CallsParticipantsRemove($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1640,11 +1682,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\CallsUpdatePostResponse200|\JoliCode\Slack\Api\Model\CallsUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\CallsUpdatePostResponse200|Model\CallsUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function callsUpdate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\CallsUpdate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\CallsUpdate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1664,11 +1706,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatDeletePostResponse200|\JoliCode\Slack\Api\Model\ChatDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatDeletePostResponse200|Model\ChatDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatDelete(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatDelete($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatDelete($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1688,11 +1730,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatDeleteScheduledMessagePostResponse200|\JoliCode\Slack\Api\Model\ChatDeleteScheduledMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatDeleteScheduledMessagePostResponse200|Model\ChatDeleteScheduledMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatDeleteScheduledMessage(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatDeleteScheduledMessage($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatDeleteScheduledMessage($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1707,11 +1749,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatGetPermalinkGetResponse200|\JoliCode\Slack\Api\Model\ChatGetPermalinkGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatGetPermalinkGetResponse200|Model\ChatGetPermalinkGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatGetPermalink(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatGetPermalink($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatGetPermalink($queryParameters), $fetch);
     }
 
     /**
@@ -1730,11 +1772,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatMeMessagePostResponse200|\JoliCode\Slack\Api\Model\ChatMeMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatMeMessagePostResponse200|Model\ChatMeMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatMeMessage(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatMeMessage($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatMeMessage($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1763,11 +1805,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatPostEphemeralPostResponse200|\JoliCode\Slack\Api\Model\ChatPostEphemeralPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatPostEphemeralPostResponse200|Model\ChatPostEphemeralPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatPostEphemeral(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatPostEphemeral($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatPostEphemeral($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1800,11 +1842,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatPostMessagePostResponse200|\JoliCode\Slack\Api\Model\ChatPostMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatPostMessagePostResponse200|Model\ChatPostMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatPostMessage(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatPostMessage($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatPostMessage($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1833,11 +1875,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200|\JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatScheduleMessagePostResponse200|Model\ChatScheduleMessagePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatScheduleMessage(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatScheduleMessage($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatScheduleMessage($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1859,11 +1901,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatScheduledMessagesListGetResponse200|\JoliCode\Slack\Api\Model\ChatScheduledMessagesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatScheduledMessagesListGetResponse200|Model\ChatScheduledMessagesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatScheduledMessagesList(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatScheduledMessagesList($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatScheduledMessagesList($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1886,11 +1928,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatUnfurlPostResponse200|\JoliCode\Slack\Api\Model\ChatUnfurlPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatUnfurlPostResponse200|Model\ChatUnfurlPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatUnfurl(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatUnfurl($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatUnfurl($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1915,11 +1957,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ChatUpdatePostResponse200|\JoliCode\Slack\Api\Model\ChatUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ChatUpdatePostResponse200|Model\ChatUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function chatUpdate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ChatUpdate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ChatUpdate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1937,11 +1979,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsArchivePostResponse200|\JoliCode\Slack\Api\Model\ConversationsArchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsArchivePostResponse200|Model\ConversationsArchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsArchive(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsArchive($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsArchive($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1959,11 +2001,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsClosePostResponse200|\JoliCode\Slack\Api\Model\ConversationsClosePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsClosePostResponse200|Model\ConversationsClosePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsClose(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsClose($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsClose($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -1982,11 +2024,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsCreatePostResponse200|\JoliCode\Slack\Api\Model\ConversationsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsCreatePostResponse200|Model\ConversationsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsCreate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsCreate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsCreate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2006,11 +2048,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsHistoryGetResponse200|\JoliCode\Slack\Api\Model\ConversationsHistoryGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsHistoryGetResponse200|Model\ConversationsHistoryGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsHistory(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsHistory($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsHistory($queryParameters), $fetch);
     }
 
     /**
@@ -2026,11 +2068,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsInfoGetResponse200|\JoliCode\Slack\Api\Model\ConversationsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsInfoGetResponse200|Model\ConversationsInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsInfo($queryParameters), $fetch);
     }
 
     /**
@@ -2049,11 +2091,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsInvitePostResponse200|\JoliCode\Slack\Api\Model\ConversationsInvitePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsInvitePostResponse200|Model\ConversationsInvitePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsInvite(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsInvite($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsInvite($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2071,11 +2113,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsJoinPostResponse200|\JoliCode\Slack\Api\Model\ConversationsJoinPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsJoinPostResponse200|Model\ConversationsJoinPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsJoin(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsJoin($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsJoin($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2094,11 +2136,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsKickPostResponse200|\JoliCode\Slack\Api\Model\ConversationsKickPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsKickPostResponse200|Model\ConversationsKickPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsKick(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsKick($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsKick($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2116,11 +2158,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsLeavePostResponse200|\JoliCode\Slack\Api\Model\ConversationsLeavePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsLeavePostResponse200|Model\ConversationsLeavePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsLeave(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsLeave($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsLeave($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2138,11 +2180,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsListGetResponse200|\JoliCode\Slack\Api\Model\ConversationsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsListGetResponse200|Model\ConversationsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsList($queryParameters), $fetch);
     }
 
     /**
@@ -2161,11 +2203,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsMarkPostResponse200|\JoliCode\Slack\Api\Model\ConversationsMarkPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsMarkPostResponse200|Model\ConversationsMarkPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsMark(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsMark($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsMark($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2181,11 +2223,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsMembersGetResponse200|\JoliCode\Slack\Api\Model\ConversationsMembersGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsMembersGetResponse200|Model\ConversationsMembersGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsMembers(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsMembers($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsMembers($queryParameters), $fetch);
     }
 
     /**
@@ -2205,11 +2247,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsOpenPostResponse200|\JoliCode\Slack\Api\Model\ConversationsOpenPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsOpenPostResponse200|Model\ConversationsOpenPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsOpen(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsOpen($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsOpen($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2228,11 +2270,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsRenamePostResponse200|\JoliCode\Slack\Api\Model\ConversationsRenamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsRenamePostResponse200|Model\ConversationsRenamePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsRename(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsRename($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsRename($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2252,11 +2294,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsRepliesGetResponse200|\JoliCode\Slack\Api\Model\ConversationsRepliesGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsRepliesGetResponse200|Model\ConversationsRepliesGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsReplies(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsReplies($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsReplies($queryParameters), $fetch);
     }
 
     /**
@@ -2275,11 +2317,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsSetPurposePostResponse200|\JoliCode\Slack\Api\Model\ConversationsSetPurposePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsSetPurposePostResponse200|Model\ConversationsSetPurposePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsSetPurpose(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsSetPurpose($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsSetPurpose($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2298,11 +2340,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsSetTopicPostResponse200|\JoliCode\Slack\Api\Model\ConversationsSetTopicPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsSetTopicPostResponse200|Model\ConversationsSetTopicPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsSetTopic(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsSetTopic($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsSetTopic($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2320,11 +2362,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ConversationsUnarchivePostResponse200|\JoliCode\Slack\Api\Model\ConversationsUnarchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ConversationsUnarchivePostResponse200|Model\ConversationsUnarchivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function conversationsUnarchive(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ConversationsUnarchive($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ConversationsUnarchive($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2343,11 +2385,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\DialogOpenGetResponse200|\JoliCode\Slack\Api\Model\DialogOpenGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\DialogOpenGetResponse200|Model\DialogOpenGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function dialogOpen(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\DialogOpen($queryParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\DialogOpen($queryParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2360,11 +2402,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\DndEndDndPostResponse200|\JoliCode\Slack\Api\Model\DndEndDndPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\DndEndDndPostResponse200|Model\DndEndDndPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function dndEndDnd(array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\DndEndDnd($headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\DndEndDnd($headerParameters), $fetch);
     }
 
     /**
@@ -2377,11 +2419,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\DndEndSnoozePostResponse200|\JoliCode\Slack\Api\Model\DndEndSnoozePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\DndEndSnoozePostResponse200|Model\DndEndSnoozePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function dndEndSnooze(array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\DndEndSnooze($headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\DndEndSnooze($headerParameters), $fetch);
     }
 
     /**
@@ -2395,11 +2437,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\DndInfoGetResponse200|\JoliCode\Slack\Api\Model\DndInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\DndInfoGetResponse200|Model\DndInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function dndInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\DndInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\DndInfo($queryParameters), $fetch);
     }
 
     /**
@@ -2413,11 +2455,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\DndSetSnoozePostResponse200|\JoliCode\Slack\Api\Model\DndSetSnoozePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\DndSetSnoozePostResponse200|Model\DndSetSnoozePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function dndSetSnooze(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\DndSetSnooze($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\DndSetSnooze($formParameters), $fetch);
     }
 
     /**
@@ -2431,11 +2473,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\DndTeamInfoGetResponse200|\JoliCode\Slack\Api\Model\DndTeamInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\DndTeamInfoGetResponse200|Model\DndTeamInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function dndTeamInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\DndTeamInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\DndTeamInfo($queryParameters), $fetch);
     }
 
     /**
@@ -2448,11 +2490,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\EmojiListGetResponse200|\JoliCode\Slack\Api\Model\EmojiListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\EmojiListGetResponse200|Model\EmojiListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function emojiList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\EmojiList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\EmojiList($queryParameters), $fetch);
     }
 
     /**
@@ -2471,11 +2513,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesCommentsDeletePostResponse200|\JoliCode\Slack\Api\Model\FilesCommentsDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesCommentsDeletePostResponse200|Model\FilesCommentsDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesCommentsDelete(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesCommentsDelete($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesCommentsDelete($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2493,11 +2535,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesDeletePostResponse200|\JoliCode\Slack\Api\Model\FilesDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesDeletePostResponse200|Model\FilesDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesDelete(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesDelete($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesDelete($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2515,11 +2557,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesInfoGetResponse200|\JoliCode\Slack\Api\Model\FilesInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesInfoGetResponse200|Model\FilesInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesInfo($queryParameters), $fetch);
     }
 
     /**
@@ -2540,11 +2582,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesListGetResponse200|\JoliCode\Slack\Api\Model\FilesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesListGetResponse200|Model\FilesListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesList($queryParameters), $fetch);
     }
 
     /**
@@ -2563,11 +2605,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesRemoteAddPostResponse200|\JoliCode\Slack\Api\Model\FilesRemoteAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesRemoteAddPostResponse200|Model\FilesRemoteAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesRemoteAdd(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesRemoteAdd($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesRemoteAdd($formParameters), $fetch);
     }
 
     /**
@@ -2582,11 +2624,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesRemoteInfoGetResponse200|\JoliCode\Slack\Api\Model\FilesRemoteInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesRemoteInfoGetResponse200|Model\FilesRemoteInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesRemoteInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesRemoteInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesRemoteInfo($queryParameters), $fetch);
     }
 
     /**
@@ -2604,11 +2646,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesRemoteListGetResponse200|\JoliCode\Slack\Api\Model\FilesRemoteListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesRemoteListGetResponse200|Model\FilesRemoteListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesRemoteList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesRemoteList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesRemoteList($queryParameters), $fetch);
     }
 
     /**
@@ -2623,11 +2665,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesRemoteRemovePostResponse200|\JoliCode\Slack\Api\Model\FilesRemoteRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesRemoteRemovePostResponse200|Model\FilesRemoteRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesRemoteRemove(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesRemoteRemove($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesRemoteRemove($formParameters), $fetch);
     }
 
     /**
@@ -2643,11 +2685,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesRemoteShareGetResponse200|\JoliCode\Slack\Api\Model\FilesRemoteShareGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesRemoteShareGetResponse200|Model\FilesRemoteShareGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesRemoteShare(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesRemoteShare($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesRemoteShare($queryParameters), $fetch);
     }
 
     /**
@@ -2667,11 +2709,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesRemoteUpdatePostResponse200|\JoliCode\Slack\Api\Model\FilesRemoteUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesRemoteUpdatePostResponse200|Model\FilesRemoteUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesRemoteUpdate(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesRemoteUpdate($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesRemoteUpdate($formParameters), $fetch);
     }
 
     /**
@@ -2689,11 +2731,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesRevokePublicURLPostResponse200|\JoliCode\Slack\Api\Model\FilesRevokePublicURLPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesRevokePublicURLPostResponse200|Model\FilesRevokePublicURLPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesRevokePublicURL(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesRevokePublicURL($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesRevokePublicURL($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2711,11 +2753,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesSharedPublicURLPostResponse200|\JoliCode\Slack\Api\Model\FilesSharedPublicURLPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesSharedPublicURLPostResponse200|Model\FilesSharedPublicURLPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesSharedPublicURL(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesSharedPublicURL($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesSharedPublicURL($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2736,11 +2778,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\FilesUploadPostResponse200|\JoliCode\Slack\Api\Model\FilesUploadPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\FilesUploadPostResponse200|Model\FilesUploadPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function filesUpload(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\FilesUpload($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\FilesUpload($formParameters), $fetch);
     }
 
     /**
@@ -2756,11 +2798,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\MigrationExchangeGetResponse200|\JoliCode\Slack\Api\Model\MigrationExchangeGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\MigrationExchangeGetResponse200|Model\MigrationExchangeGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function migrationExchange(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\MigrationExchange($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\MigrationExchange($queryParameters), $fetch);
     }
 
     /**
@@ -2777,11 +2819,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\OauthAccessGetResponse200|\JoliCode\Slack\Api\Model\OauthAccessGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\OauthAccessGetResponse200|Model\OauthAccessGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function oauthAccess(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\OauthAccess($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\OauthAccess($queryParameters), $fetch);
     }
 
     /**
@@ -2798,11 +2840,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\OauthTokenGetResponse200|\JoliCode\Slack\Api\Model\OauthTokenGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\OauthTokenGetResponse200|Model\OauthTokenGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function oauthToken(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\OauthToken($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\OauthToken($queryParameters), $fetch);
     }
 
     /**
@@ -2818,11 +2860,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\OauthV2AccessGetResponse200|\JoliCode\Slack\Api\Model\OauthV2AccessGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\OauthV2AccessGetResponse200|Model\OauthV2AccessGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function oauthV2Access(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\OauthV2Access($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\OauthV2Access($queryParameters), $fetch);
     }
 
     /**
@@ -2841,11 +2883,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\PinsAddPostResponse200|\JoliCode\Slack\Api\Model\PinsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\PinsAddPostResponse200|Model\PinsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function pinsAdd(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\PinsAdd($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\PinsAdd($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2859,11 +2901,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\PinsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\PinsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function pinsList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\PinsList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\PinsList($queryParameters), $fetch);
     }
 
     /**
@@ -2882,11 +2924,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\PinsRemovePostResponse200|\JoliCode\Slack\Api\Model\PinsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\PinsRemovePostResponse200|Model\PinsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function pinsRemove(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\PinsRemove($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\PinsRemove($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2906,11 +2948,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ReactionsAddPostResponse200|\JoliCode\Slack\Api\Model\ReactionsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ReactionsAddPostResponse200|Model\ReactionsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function reactionsAdd(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ReactionsAdd($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ReactionsAdd($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -2928,11 +2970,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ReactionsGetGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ReactionsGetGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function reactionsGet(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ReactionsGet($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ReactionsGet($queryParameters), $fetch);
     }
 
     /**
@@ -2951,11 +2993,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ReactionsListGetResponse200|\JoliCode\Slack\Api\Model\ReactionsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ReactionsListGetResponse200|Model\ReactionsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function reactionsList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ReactionsList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ReactionsList($queryParameters), $fetch);
     }
 
     /**
@@ -2977,11 +3019,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ReactionsRemovePostResponse200|\JoliCode\Slack\Api\Model\ReactionsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ReactionsRemovePostResponse200|Model\ReactionsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function reactionsRemove(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ReactionsRemove($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ReactionsRemove($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3001,11 +3043,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\RemindersAddPostResponse200|\JoliCode\Slack\Api\Model\RemindersAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\RemindersAddPostResponse200|Model\RemindersAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function remindersAdd(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\RemindersAdd($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\RemindersAdd($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3023,11 +3065,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\RemindersCompletePostResponse200|\JoliCode\Slack\Api\Model\RemindersCompletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\RemindersCompletePostResponse200|Model\RemindersCompletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function remindersComplete(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\RemindersComplete($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\RemindersComplete($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3045,11 +3087,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\RemindersDeletePostResponse200|\JoliCode\Slack\Api\Model\RemindersDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\RemindersDeletePostResponse200|Model\RemindersDeletePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function remindersDelete(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\RemindersDelete($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\RemindersDelete($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3063,11 +3105,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\RemindersInfoGetResponse200|\JoliCode\Slack\Api\Model\RemindersInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\RemindersInfoGetResponse200|Model\RemindersInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function remindersInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\RemindersInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\RemindersInfo($queryParameters), $fetch);
     }
 
     /**
@@ -3080,11 +3122,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\RemindersListGetResponse200|\JoliCode\Slack\Api\Model\RemindersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\RemindersListGetResponse200|Model\RemindersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function remindersList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\RemindersList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\RemindersList($queryParameters), $fetch);
     }
 
     /**
@@ -3099,11 +3141,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\RtmConnectGetResponse200|\JoliCode\Slack\Api\Model\RtmConnectGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\RtmConnectGetResponse200|Model\RtmConnectGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function rtmConnect(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\RtmConnect($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\RtmConnect($queryParameters), $fetch);
     }
 
     /**
@@ -3122,11 +3164,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\SearchMessagesGetResponse200|\JoliCode\Slack\Api\Model\SearchMessagesGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\SearchMessagesGetResponse200|Model\SearchMessagesGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function searchMessages(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\SearchMessages($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\SearchMessages($queryParameters), $fetch);
     }
 
     /**
@@ -3147,11 +3189,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\StarsAddPostResponse200|\JoliCode\Slack\Api\Model\StarsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\StarsAddPostResponse200|Model\StarsAddPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function starsAdd(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\StarsAdd($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\StarsAdd($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3168,11 +3210,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\StarsListGetResponse200|\JoliCode\Slack\Api\Model\StarsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\StarsListGetResponse200|Model\StarsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function starsList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\StarsList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\StarsList($queryParameters), $fetch);
     }
 
     /**
@@ -3193,11 +3235,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\StarsRemovePostResponse200|\JoliCode\Slack\Api\Model\StarsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\StarsRemovePostResponse200|Model\StarsRemovePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function starsRemove(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\StarsRemove($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\StarsRemove($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3213,11 +3255,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\TeamAccessLogsGetResponse200|\JoliCode\Slack\Api\Model\TeamAccessLogsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\TeamAccessLogsGetResponse200|Model\TeamAccessLogsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function teamAccessLogs(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\TeamAccessLogs($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\TeamAccessLogs($queryParameters), $fetch);
     }
 
     /**
@@ -3231,11 +3273,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\TeamBillableInfoGetResponse200|\JoliCode\Slack\Api\Model\TeamBillableInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\TeamBillableInfoGetResponse200|Model\TeamBillableInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function teamBillableInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\TeamBillableInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\TeamBillableInfo($queryParameters), $fetch);
     }
 
     /**
@@ -3249,11 +3291,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\TeamInfoGetResponse200|\JoliCode\Slack\Api\Model\TeamInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\TeamInfoGetResponse200|Model\TeamInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function teamInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\TeamInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\TeamInfo($queryParameters), $fetch);
     }
 
     /**
@@ -3272,11 +3314,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\TeamIntegrationLogsGetResponse200|\JoliCode\Slack\Api\Model\TeamIntegrationLogsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\TeamIntegrationLogsGetResponse200|Model\TeamIntegrationLogsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function teamIntegrationLogs(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\TeamIntegrationLogs($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\TeamIntegrationLogs($queryParameters), $fetch);
     }
 
     /**
@@ -3290,11 +3332,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\TeamProfileGetGetResponse200|\JoliCode\Slack\Api\Model\TeamProfileGetGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\TeamProfileGetGetResponse200|Model\TeamProfileGetGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function teamProfileGet(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\TeamProfileGet($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\TeamProfileGet($queryParameters), $fetch);
     }
 
     /**
@@ -3316,11 +3358,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsergroupsCreatePostResponse200|\JoliCode\Slack\Api\Model\UsergroupsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsergroupsCreatePostResponse200|Model\UsergroupsCreatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usergroupsCreate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsergroupsCreate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsergroupsCreate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3339,11 +3381,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsergroupsDisablePostResponse200|\JoliCode\Slack\Api\Model\UsergroupsDisablePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsergroupsDisablePostResponse200|Model\UsergroupsDisablePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usergroupsDisable(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsergroupsDisable($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsergroupsDisable($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3362,11 +3404,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsergroupsEnablePostResponse200|\JoliCode\Slack\Api\Model\UsergroupsEnablePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsergroupsEnablePostResponse200|Model\UsergroupsEnablePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usergroupsEnable(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsergroupsEnable($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsergroupsEnable($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3383,11 +3425,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsergroupsListGetResponse200|\JoliCode\Slack\Api\Model\UsergroupsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsergroupsListGetResponse200|Model\UsergroupsListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usergroupsList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsergroupsList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsergroupsList($queryParameters), $fetch);
     }
 
     /**
@@ -3410,11 +3452,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsergroupsUpdatePostResponse200|\JoliCode\Slack\Api\Model\UsergroupsUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsergroupsUpdatePostResponse200|Model\UsergroupsUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usergroupsUpdate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsergroupsUpdate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsergroupsUpdate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3429,11 +3471,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsergroupsUsersListGetResponse200|\JoliCode\Slack\Api\Model\UsergroupsUsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsergroupsUsersListGetResponse200|Model\UsergroupsUsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usergroupsUsersList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsergroupsUsersList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsergroupsUsersList($queryParameters), $fetch);
     }
 
     /**
@@ -3453,11 +3495,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsergroupsUsersUpdatePostResponse200|\JoliCode\Slack\Api\Model\UsergroupsUsersUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsergroupsUsersUpdatePostResponse200|Model\UsergroupsUsersUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usergroupsUsersUpdate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsergroupsUsersUpdate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsergroupsUsersUpdate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3475,11 +3517,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersConversationsGetResponse200|\JoliCode\Slack\Api\Model\UsersConversationsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersConversationsGetResponse200|Model\UsersConversationsGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersConversations(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersConversations($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersConversations($queryParameters), $fetch);
     }
 
     /**
@@ -3492,11 +3534,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersDeletePhotoPostResponse200|\JoliCode\Slack\Api\Model\UsersDeletePhotoPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersDeletePhotoPostResponse200|Model\UsersDeletePhotoPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersDeletePhoto(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersDeletePhoto($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersDeletePhoto($formParameters), $fetch);
     }
 
     /**
@@ -3510,11 +3552,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersGetPresenceGetResponse200|\JoliCode\Slack\Api\Model\UsersGetPresenceGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersGetPresenceGetResponse200|Model\UsersGetPresenceGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersGetPresence(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersGetPresence($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersGetPresence($queryParameters), $fetch);
     }
 
     /**
@@ -3527,11 +3569,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersIdentityGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersIdentityGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersIdentity(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersIdentity($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersIdentity($queryParameters), $fetch);
     }
 
     /**
@@ -3546,11 +3588,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersInfoGetResponse200|\JoliCode\Slack\Api\Model\UsersInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersInfoGetResponse200|Model\UsersInfoGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersInfo(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersInfo($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersInfo($queryParameters), $fetch);
     }
 
     /**
@@ -3567,11 +3609,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersListGetResponse200|\JoliCode\Slack\Api\Model\UsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersListGetResponse200|Model\UsersListGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersList(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersList($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersList($queryParameters), $fetch);
     }
 
     /**
@@ -3585,11 +3627,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponse200|\JoliCode\Slack\Api\Model\UsersLookupByEmailGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersLookupByEmailGetResponse200|Model\UsersLookupByEmailGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersLookupByEmail(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersLookupByEmail($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersLookupByEmail($queryParameters), $fetch);
     }
 
     /**
@@ -3604,11 +3646,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersProfileGetGetResponse200|\JoliCode\Slack\Api\Model\UsersProfileGetGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersProfileGetGetResponse200|Model\UsersProfileGetGetResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersProfileGet(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersProfileGet($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersProfileGet($queryParameters), $fetch);
     }
 
     /**
@@ -3629,11 +3671,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersProfileSetPostResponse200|\JoliCode\Slack\Api\Model\UsersProfileSetPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersProfileSetPostResponse200|Model\UsersProfileSetPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersProfileSet(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersProfileSet($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersProfileSet($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3646,11 +3688,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersSetActivePostResponse200|\JoliCode\Slack\Api\Model\UsersSetActivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersSetActivePostResponse200|Model\UsersSetActivePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersSetActive(array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersSetActive($headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersSetActive($headerParameters), $fetch);
     }
 
     /**
@@ -3667,11 +3709,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersSetPhotoPostResponse200|\JoliCode\Slack\Api\Model\UsersSetPhotoPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersSetPhotoPostResponse200|Model\UsersSetPhotoPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersSetPhoto(array $formParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersSetPhoto($formParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersSetPhoto($formParameters), $fetch);
     }
 
     /**
@@ -3689,11 +3731,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\UsersSetPresencePostResponse200|\JoliCode\Slack\Api\Model\UsersSetPresencePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\UsersSetPresencePostResponse200|Model\UsersSetPresencePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function usersSetPresence(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\UsersSetPresence($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\UsersSetPresence($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3712,11 +3754,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ViewsOpenPostResponse200|\JoliCode\Slack\Api\Model\ViewsOpenPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ViewsOpenPostResponse200|Model\ViewsOpenPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function viewsOpen(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ViewsOpen($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ViewsOpen($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3736,11 +3778,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ViewsPublishPostResponse200|\JoliCode\Slack\Api\Model\ViewsPublishPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ViewsPublishPostResponse200|Model\ViewsPublishPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function viewsPublish(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ViewsPublish($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ViewsPublish($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3759,11 +3801,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ViewsPushPostResponse200|\JoliCode\Slack\Api\Model\ViewsPushPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ViewsPushPostResponse200|Model\ViewsPushPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function viewsPush(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ViewsPush($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ViewsPush($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3784,11 +3826,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\ViewsUpdatePostResponse200|\JoliCode\Slack\Api\Model\ViewsUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\ViewsUpdatePostResponse200|Model\ViewsUpdatePostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function viewsUpdate(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\ViewsUpdate($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\ViewsUpdate($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3807,11 +3849,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\WorkflowsStepCompletedPostResponse200|\JoliCode\Slack\Api\Model\WorkflowsStepCompletedPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\WorkflowsStepCompletedPostResponse200|Model\WorkflowsStepCompletedPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function workflowsStepCompleted(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\WorkflowsStepCompleted($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\WorkflowsStepCompleted($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3830,11 +3872,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\WorkflowsStepFailedPostResponse200|\JoliCode\Slack\Api\Model\WorkflowsStepFailedPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\WorkflowsStepFailedPostResponse200|Model\WorkflowsStepFailedPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function workflowsStepFailed(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\WorkflowsStepFailed($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\WorkflowsStepFailed($formParameters, $headerParameters), $fetch);
     }
 
     /**
@@ -3856,11 +3898,11 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \JoliCode\Slack\Api\Model\WorkflowsUpdateStepPostResponse200|\JoliCode\Slack\Api\Model\WorkflowsUpdateStepPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\WorkflowsUpdateStepPostResponse200|Model\WorkflowsUpdateStepPostResponsedefault|\Psr\Http\Message\ResponseInterface|null
      */
     public function workflowsUpdateStep(array $formParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \JoliCode\Slack\Api\Endpoint\WorkflowsUpdateStep($formParameters, $headerParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\WorkflowsUpdateStep($formParameters, $headerParameters), $fetch);
     }
 
     public static function create($httpClient = null, array $additionalPlugins = [], array $additionalNormalizers = [])
@@ -3878,7 +3920,7 @@ class Client extends \JoliCode\Slack\Api\Runtime\Client\Client
         }
         $requestFactory = \Http\Discovery\Psr17FactoryDiscovery::findRequestFactory();
         $streamFactory = \Http\Discovery\Psr17FactoryDiscovery::findStreamFactory();
-        $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \JoliCode\Slack\Api\Normalizer\JaneObjectNormalizer()];
+        $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new Normalizer\JaneObjectNormalizer()];
         if (\count($additionalNormalizers) > 0) {
             $normalizers = array_merge($normalizers, $additionalNormalizers);
         }

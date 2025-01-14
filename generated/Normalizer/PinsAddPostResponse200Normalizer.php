@@ -32,12 +32,12 @@ class PinsAddPostResponse200Normalizer implements DenormalizerInterface, Normali
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\PinsAddPostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\PinsAddPostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\PinsAddPostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\PinsAddPostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -72,8 +72,8 @@ class PinsAddPostResponse200Normalizer implements DenormalizerInterface, Normali
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\PinsAddPostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\PinsAddPostResponse200' => false];
     }
 }

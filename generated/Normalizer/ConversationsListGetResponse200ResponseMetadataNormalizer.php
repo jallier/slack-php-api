@@ -32,12 +32,12 @@ class ConversationsListGetResponse200ResponseMetadataNormalizer implements Denor
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ConversationsListGetResponse200ResponseMetadata' === $type;
+        return 'JoliCode\Slack\Api\Model\ConversationsListGetResponse200ResponseMetadata' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ConversationsListGetResponse200ResponseMetadata' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ConversationsListGetResponse200ResponseMetadata' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -72,8 +72,8 @@ class ConversationsListGetResponse200ResponseMetadataNormalizer implements Denor
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ConversationsListGetResponse200ResponseMetadata' => false];
+        return ['JoliCode\Slack\Api\Model\ConversationsListGetResponse200ResponseMetadata' => false];
     }
 }

@@ -32,12 +32,12 @@ class ObjsSubteamNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsSubteam' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsSubteam' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsSubteam' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsSubteam' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -133,7 +133,7 @@ class ObjsSubteamNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setName(null);
         }
         if (\array_key_exists('prefs', $data) && null !== $data['prefs']) {
-            $object->setPrefs($this->denormalizer->denormalize($data['prefs'], 'JoliCode\\Slack\\Api\\Model\\ObjsSubteamPrefs', 'json', $context));
+            $object->setPrefs($this->denormalizer->denormalize($data['prefs'], 'JoliCode\Slack\Api\Model\ObjsSubteamPrefs', 'json', $context));
         } elseif (\array_key_exists('prefs', $data) && null === $data['prefs']) {
             $object->setPrefs(null);
         }
@@ -206,8 +206,8 @@ class ObjsSubteamNormalizer implements DenormalizerInterface, NormalizerInterfac
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsSubteam' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsSubteam' => false];
     }
 }

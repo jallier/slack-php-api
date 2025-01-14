@@ -32,12 +32,12 @@ class ObjsConversationNormalizer implements DenormalizerInterface, NormalizerInt
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsConversation' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsConversation' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsConversation' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsConversation' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -85,7 +85,7 @@ class ObjsConversationNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setCreator(null);
         }
         if (\array_key_exists('display_counts', $data) && null !== $data['display_counts']) {
-            $object->setDisplayCounts($this->denormalizer->denormalize($data['display_counts'], 'JoliCode\\Slack\\Api\\Model\\ObjsConversationDisplayCounts', 'json', $context));
+            $object->setDisplayCounts($this->denormalizer->denormalize($data['display_counts'], 'JoliCode\Slack\Api\Model\ObjsConversationDisplayCounts', 'json', $context));
         } elseif (\array_key_exists('display_counts', $data) && null === $data['display_counts']) {
             $object->setDisplayCounts(null);
         }
@@ -310,7 +310,7 @@ class ObjsConversationNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setPriority(null);
         }
         if (\array_key_exists('purpose', $data) && null !== $data['purpose']) {
-            $object->setPurpose($this->denormalizer->denormalize($data['purpose'], 'JoliCode\\Slack\\Api\\Model\\ObjsConversationPurpose', 'json', $context));
+            $object->setPurpose($this->denormalizer->denormalize($data['purpose'], 'JoliCode\Slack\Api\Model\ObjsConversationPurpose', 'json', $context));
         } elseif (\array_key_exists('purpose', $data) && null === $data['purpose']) {
             $object->setPurpose(null);
         }
@@ -326,7 +326,7 @@ class ObjsConversationNormalizer implements DenormalizerInterface, NormalizerInt
         if (\array_key_exists('shares', $data) && null !== $data['shares']) {
             $values_7 = [];
             foreach ($data['shares'] as $value_7) {
-                $values_7[] = $this->denormalizer->denormalize($value_7, 'JoliCode\\Slack\\Api\\Model\\ObjsConversationSharesItem', 'json', $context);
+                $values_7[] = $this->denormalizer->denormalize($value_7, 'JoliCode\Slack\Api\Model\ObjsConversationSharesItem', 'json', $context);
             }
             $object->setShares($values_7);
         } elseif (\array_key_exists('shares', $data) && null === $data['shares']) {
@@ -338,7 +338,7 @@ class ObjsConversationNormalizer implements DenormalizerInterface, NormalizerInt
             $object->setTimezoneCount(null);
         }
         if (\array_key_exists('topic', $data) && null !== $data['topic']) {
-            $object->setTopic($this->denormalizer->denormalize($data['topic'], 'JoliCode\\Slack\\Api\\Model\\ObjsConversationTopic', 'json', $context));
+            $object->setTopic($this->denormalizer->denormalize($data['topic'], 'JoliCode\Slack\Api\Model\ObjsConversationTopic', 'json', $context));
         } elseif (\array_key_exists('topic', $data) && null === $data['topic']) {
             $object->setTopic(null);
         }
@@ -581,8 +581,8 @@ class ObjsConversationNormalizer implements DenormalizerInterface, NormalizerInt
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsConversation' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsConversation' => false];
     }
 }

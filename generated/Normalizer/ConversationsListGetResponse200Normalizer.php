@@ -32,12 +32,12 @@ class ConversationsListGetResponse200Normalizer implements DenormalizerInterface
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ConversationsListGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\ConversationsListGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ConversationsListGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ConversationsListGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class ConversationsListGetResponse200Normalizer implements DenormalizerInterface
         if (\array_key_exists('channels', $data) && null !== $data['channels']) {
             $values = [];
             foreach ($data['channels'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsConversation', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsConversation', 'json', $context);
             }
             $object->setChannels($values);
         } elseif (\array_key_exists('channels', $data) && null === $data['channels']) {
@@ -67,7 +67,7 @@ class ConversationsListGetResponse200Normalizer implements DenormalizerInterface
             $object->setOk(null);
         }
         if (\array_key_exists('response_metadata', $data) && null !== $data['response_metadata']) {
-            $object->setResponseMetadata($this->denormalizer->denormalize($data['response_metadata'], 'JoliCode\\Slack\\Api\\Model\\ConversationsListGetResponse200ResponseMetadata', 'json', $context));
+            $object->setResponseMetadata($this->denormalizer->denormalize($data['response_metadata'], 'JoliCode\Slack\Api\Model\ConversationsListGetResponse200ResponseMetadata', 'json', $context));
         } elseif (\array_key_exists('response_metadata', $data) && null === $data['response_metadata']) {
             $object->setResponseMetadata(null);
         }
@@ -94,8 +94,8 @@ class ConversationsListGetResponse200Normalizer implements DenormalizerInterface
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ConversationsListGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\ConversationsListGetResponse200' => false];
     }
 }

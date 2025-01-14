@@ -32,12 +32,12 @@ class UsergroupsListGetResponse200Normalizer implements DenormalizerInterface, N
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsergroupsListGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\UsergroupsListGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsergroupsListGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsergroupsListGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -60,7 +60,7 @@ class UsergroupsListGetResponse200Normalizer implements DenormalizerInterface, N
         if (\array_key_exists('usergroups', $data) && null !== $data['usergroups']) {
             $values = [];
             foreach ($data['usergroups'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsSubteam', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsSubteam', 'json', $context);
             }
             $object->setUsergroups($values);
         } elseif (\array_key_exists('usergroups', $data) && null === $data['usergroups']) {
@@ -86,8 +86,8 @@ class UsergroupsListGetResponse200Normalizer implements DenormalizerInterface, N
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsergroupsListGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\UsergroupsListGetResponse200' => false];
     }
 }

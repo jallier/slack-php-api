@@ -32,12 +32,12 @@ class ConversationsRepliesGetResponse200MessagesItemItem1Normalizer implements D
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ConversationsRepliesGetResponse200MessagesItemItem1' === $type;
+        return 'JoliCode\Slack\Api\Model\ConversationsRepliesGetResponse200MessagesItemItem1' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ConversationsRepliesGetResponse200MessagesItemItem1' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ConversationsRepliesGetResponse200MessagesItemItem1' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -98,7 +98,7 @@ class ConversationsRepliesGetResponse200MessagesItemItem1Normalizer implements D
             $object->setUser(null);
         }
         if (\array_key_exists('user_profile', $data) && null !== $data['user_profile']) {
-            $object->setUserProfile($this->denormalizer->denormalize($data['user_profile'], 'JoliCode\\Slack\\Api\\Model\\ObjsUserProfileShort', 'json', $context));
+            $object->setUserProfile($this->denormalizer->denormalize($data['user_profile'], 'JoliCode\Slack\Api\Model\ObjsUserProfileShort', 'json', $context));
         } elseif (\array_key_exists('user_profile', $data) && null === $data['user_profile']) {
             $object->setUserProfile(null);
         }
@@ -142,8 +142,8 @@ class ConversationsRepliesGetResponse200MessagesItemItem1Normalizer implements D
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ConversationsRepliesGetResponse200MessagesItemItem1' => false];
+        return ['JoliCode\Slack\Api\Model\ConversationsRepliesGetResponse200MessagesItemItem1' => false];
     }
 }

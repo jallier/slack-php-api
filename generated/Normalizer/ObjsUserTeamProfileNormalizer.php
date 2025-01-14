@@ -32,12 +32,12 @@ class ObjsUserTeamProfileNormalizer implements DenormalizerInterface, Normalizer
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsUserTeamProfile' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsUserTeamProfile' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsUserTeamProfile' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsUserTeamProfile' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class ObjsUserTeamProfileNormalizer implements DenormalizerInterface, Normalizer
         if (\array_key_exists('fields', $data) && null !== $data['fields']) {
             $values = [];
             foreach ($data['fields'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsTeamProfileField', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsTeamProfileField', 'json', $context);
             }
             $object->setFields($values);
         } elseif (\array_key_exists('fields', $data) && null === $data['fields']) {
@@ -80,8 +80,8 @@ class ObjsUserTeamProfileNormalizer implements DenormalizerInterface, Normalizer
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsUserTeamProfile' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsUserTeamProfile' => false];
     }
 }

@@ -32,12 +32,12 @@ class OauthV2AccessGetResponse200Normalizer implements DenormalizerInterface, No
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\OauthV2AccessGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\OauthV2AccessGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\OauthV2AccessGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\OauthV2AccessGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class OauthV2AccessGetResponse200Normalizer implements DenormalizerInterface, No
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\OauthV2AccessGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\OauthV2AccessGetResponse200' => false];
     }
 }

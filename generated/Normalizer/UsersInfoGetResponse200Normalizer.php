@@ -32,12 +32,12 @@ class UsersInfoGetResponse200Normalizer implements DenormalizerInterface, Normal
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsersInfoGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\UsersInfoGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsersInfoGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsersInfoGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -59,7 +59,7 @@ class UsersInfoGetResponse200Normalizer implements DenormalizerInterface, Normal
             $object->setOk(null);
         }
         if (\array_key_exists('user', $data) && null !== $data['user']) {
-            $object->setUser($this->denormalizer->denormalize($data['user'], 'JoliCode\\Slack\\Api\\Model\\ObjsUser', 'json', $context));
+            $object->setUser($this->denormalizer->denormalize($data['user'], 'JoliCode\Slack\Api\Model\ObjsUser', 'json', $context));
             unset($data['user']);
         } elseif (\array_key_exists('user', $data) && null === $data['user']) {
             $object->setUser(null);
@@ -90,8 +90,8 @@ class UsersInfoGetResponse200Normalizer implements DenormalizerInterface, Normal
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsersInfoGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\UsersInfoGetResponse200' => false];
     }
 }

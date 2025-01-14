@@ -32,12 +32,12 @@ class ObjsUserProfileShortNormalizer implements DenormalizerInterface, Normalize
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsUserProfileShort' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsUserProfileShort' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsUserProfileShort' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsUserProfileShort' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -144,8 +144,8 @@ class ObjsUserProfileShortNormalizer implements DenormalizerInterface, Normalize
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsUserProfileShort' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsUserProfileShort' => false];
     }
 }

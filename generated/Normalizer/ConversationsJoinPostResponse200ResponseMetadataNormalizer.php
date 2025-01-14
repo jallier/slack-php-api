@@ -32,12 +32,12 @@ class ConversationsJoinPostResponse200ResponseMetadataNormalizer implements Deno
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ConversationsJoinPostResponse200ResponseMetadata' === $type;
+        return 'JoliCode\Slack\Api\Model\ConversationsJoinPostResponse200ResponseMetadata' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ConversationsJoinPostResponse200ResponseMetadata' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ConversationsJoinPostResponse200ResponseMetadata' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -82,8 +82,8 @@ class ConversationsJoinPostResponse200ResponseMetadataNormalizer implements Deno
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ConversationsJoinPostResponse200ResponseMetadata' => false];
+        return ['JoliCode\Slack\Api\Model\ConversationsJoinPostResponse200ResponseMetadata' => false];
     }
 }

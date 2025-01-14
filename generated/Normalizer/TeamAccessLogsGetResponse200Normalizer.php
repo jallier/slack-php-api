@@ -32,12 +32,12 @@ class TeamAccessLogsGetResponse200Normalizer implements DenormalizerInterface, N
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\TeamAccessLogsGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\TeamAccessLogsGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\TeamAccessLogsGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\TeamAccessLogsGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class TeamAccessLogsGetResponse200Normalizer implements DenormalizerInterface, N
         if (\array_key_exists('logins', $data) && null !== $data['logins']) {
             $values = [];
             foreach ($data['logins'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\TeamAccessLogsGetResponse200LoginsItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\TeamAccessLogsGetResponse200LoginsItem', 'json', $context);
             }
             $object->setLogins($values);
         } elseif (\array_key_exists('logins', $data) && null === $data['logins']) {
@@ -67,7 +67,7 @@ class TeamAccessLogsGetResponse200Normalizer implements DenormalizerInterface, N
             $object->setOk(null);
         }
         if (\array_key_exists('paging', $data) && null !== $data['paging']) {
-            $object->setPaging($this->denormalizer->denormalize($data['paging'], 'JoliCode\\Slack\\Api\\Model\\ObjsPaging', 'json', $context));
+            $object->setPaging($this->denormalizer->denormalize($data['paging'], 'JoliCode\Slack\Api\Model\ObjsPaging', 'json', $context));
         } elseif (\array_key_exists('paging', $data) && null === $data['paging']) {
             $object->setPaging(null);
         }
@@ -92,8 +92,8 @@ class TeamAccessLogsGetResponse200Normalizer implements DenormalizerInterface, N
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\TeamAccessLogsGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\TeamAccessLogsGetResponse200' => false];
     }
 }

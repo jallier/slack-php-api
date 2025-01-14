@@ -32,12 +32,12 @@ class AdminUsersSessionInvalidatePostResponsedefaultNormalizer implements Denorm
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminUsersSessionInvalidatePostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminUsersSessionInvalidatePostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminUsersSessionInvalidatePostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminUsersSessionInvalidatePostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class AdminUsersSessionInvalidatePostResponsedefaultNormalizer implements Denorm
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminUsersSessionInvalidatePostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\AdminUsersSessionInvalidatePostResponsedefault' => false];
     }
 }

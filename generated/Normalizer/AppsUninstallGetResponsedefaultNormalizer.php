@@ -32,12 +32,12 @@ class AppsUninstallGetResponsedefaultNormalizer implements DenormalizerInterface
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AppsUninstallGetResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\AppsUninstallGetResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AppsUninstallGetResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AppsUninstallGetResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -86,8 +86,8 @@ class AppsUninstallGetResponsedefaultNormalizer implements DenormalizerInterface
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AppsUninstallGetResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\AppsUninstallGetResponsedefault' => false];
     }
 }

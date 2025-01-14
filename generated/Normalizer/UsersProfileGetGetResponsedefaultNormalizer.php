@@ -32,12 +32,12 @@ class UsersProfileGetGetResponsedefaultNormalizer implements DenormalizerInterfa
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsersProfileGetGetResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\UsersProfileGetGetResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsersProfileGetGetResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsersProfileGetGetResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -86,8 +86,8 @@ class UsersProfileGetGetResponsedefaultNormalizer implements DenormalizerInterfa
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsersProfileGetGetResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\UsersProfileGetGetResponsedefault' => false];
     }
 }

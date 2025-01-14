@@ -32,12 +32,12 @@ class AdminTeamsAdminsListGetResponsedefaultNormalizer implements DenormalizerIn
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminTeamsAdminsListGetResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminTeamsAdminsListGetResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminTeamsAdminsListGetResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminTeamsAdminsListGetResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class AdminTeamsAdminsListGetResponsedefaultNormalizer implements DenormalizerIn
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminTeamsAdminsListGetResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\AdminTeamsAdminsListGetResponsedefault' => false];
     }
 }

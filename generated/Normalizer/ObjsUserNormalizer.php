@@ -32,12 +32,12 @@ class ObjsUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsUser' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsUser' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsUser' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsUser' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -69,7 +69,7 @@ class ObjsUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setDeleted(null);
         }
         if (\array_key_exists('enterprise_user', $data) && null !== $data['enterprise_user']) {
-            $object->setEnterpriseUser($this->denormalizer->denormalize($data['enterprise_user'], 'JoliCode\\Slack\\Api\\Model\\ObjsEnterpriseUser', 'json', $context));
+            $object->setEnterpriseUser($this->denormalizer->denormalize($data['enterprise_user'], 'JoliCode\Slack\Api\Model\ObjsEnterpriseUser', 'json', $context));
         } elseif (\array_key_exists('enterprise_user', $data) && null === $data['enterprise_user']) {
             $object->setEnterpriseUser(null);
         }
@@ -154,7 +154,7 @@ class ObjsUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setPresence(null);
         }
         if (\array_key_exists('profile', $data) && null !== $data['profile']) {
-            $object->setProfile($this->denormalizer->denormalize($data['profile'], 'JoliCode\\Slack\\Api\\Model\\ObjsUserProfile', 'json', $context));
+            $object->setProfile($this->denormalizer->denormalize($data['profile'], 'JoliCode\Slack\Api\Model\ObjsUserProfile', 'json', $context));
         } elseif (\array_key_exists('profile', $data) && null === $data['profile']) {
             $object->setProfile(null);
         }
@@ -174,7 +174,7 @@ class ObjsUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $object->setTeamId(null);
         }
         if (\array_key_exists('team_profile', $data) && null !== $data['team_profile']) {
-            $object->setTeamProfile($this->denormalizer->denormalize($data['team_profile'], 'JoliCode\\Slack\\Api\\Model\\ObjsUserTeamProfile', 'json', $context));
+            $object->setTeamProfile($this->denormalizer->denormalize($data['team_profile'], 'JoliCode\Slack\Api\Model\ObjsUserTeamProfile', 'json', $context));
         } elseif (\array_key_exists('team_profile', $data) && null === $data['team_profile']) {
             $object->setTeamProfile(null);
         }
@@ -308,8 +308,8 @@ class ObjsUserNormalizer implements DenormalizerInterface, NormalizerInterface, 
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsUser' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsUser' => false];
     }
 }

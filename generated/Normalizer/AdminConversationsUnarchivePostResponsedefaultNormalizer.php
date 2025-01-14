@@ -32,12 +32,12 @@ class AdminConversationsUnarchivePostResponsedefaultNormalizer implements Denorm
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminConversationsUnarchivePostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminConversationsUnarchivePostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminConversationsUnarchivePostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminConversationsUnarchivePostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -78,8 +78,8 @@ class AdminConversationsUnarchivePostResponsedefaultNormalizer implements Denorm
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminConversationsUnarchivePostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\AdminConversationsUnarchivePostResponsedefault' => false];
     }
 }

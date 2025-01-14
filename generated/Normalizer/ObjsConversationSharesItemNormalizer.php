@@ -32,12 +32,12 @@ class ObjsConversationSharesItemNormalizer implements DenormalizerInterface, Nor
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsConversationSharesItem' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsConversationSharesItem' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsConversationSharesItem' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsConversationSharesItem' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -78,7 +78,7 @@ class ObjsConversationSharesItemNormalizer implements DenormalizerInterface, Nor
             $object->setName(null);
         }
         if (\array_key_exists('team', $data) && null !== $data['team']) {
-            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\\Slack\\Api\\Model\\ObjsTeam', 'json', $context));
+            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\Slack\Api\Model\ObjsTeam', 'json', $context));
         } elseif (\array_key_exists('team', $data) && null === $data['team']) {
             $object->setTeam(null);
         }
@@ -112,8 +112,8 @@ class ObjsConversationSharesItemNormalizer implements DenormalizerInterface, Nor
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsConversationSharesItem' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsConversationSharesItem' => false];
     }
 }

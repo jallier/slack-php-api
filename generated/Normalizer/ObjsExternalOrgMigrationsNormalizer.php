@@ -32,12 +32,12 @@ class ObjsExternalOrgMigrationsNormalizer implements DenormalizerInterface, Norm
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsExternalOrgMigrations' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsExternalOrgMigrations' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsExternalOrgMigrations' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsExternalOrgMigrations' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class ObjsExternalOrgMigrationsNormalizer implements DenormalizerInterface, Norm
         if (\array_key_exists('current', $data) && null !== $data['current']) {
             $values = [];
             foreach ($data['current'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsExternalOrgMigrationsCurrentItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsExternalOrgMigrationsCurrentItem', 'json', $context);
             }
             $object->setCurrent($values);
         } elseif (\array_key_exists('current', $data) && null === $data['current']) {
@@ -86,8 +86,8 @@ class ObjsExternalOrgMigrationsNormalizer implements DenormalizerInterface, Norm
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsExternalOrgMigrations' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsExternalOrgMigrations' => false];
     }
 }

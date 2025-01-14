@@ -32,12 +32,12 @@ class ObjsFileNormalizer implements DenormalizerInterface, NormalizerInterface, 
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsFile' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsFile' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsFile' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsFile' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -256,14 +256,14 @@ class ObjsFileNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (\array_key_exists('reactions', $data) && null !== $data['reactions']) {
             $values_4 = [];
             foreach ($data['reactions'] as $value_4) {
-                $values_4[] = $this->denormalizer->denormalize($value_4, 'JoliCode\\Slack\\Api\\Model\\ObjsReaction', 'json', $context);
+                $values_4[] = $this->denormalizer->denormalize($value_4, 'JoliCode\Slack\Api\Model\ObjsReaction', 'json', $context);
             }
             $object->setReactions($values_4);
         } elseif (\array_key_exists('reactions', $data) && null === $data['reactions']) {
             $object->setReactions(null);
         }
         if (\array_key_exists('shares', $data) && null !== $data['shares']) {
-            $object->setShares($this->denormalizer->denormalize($data['shares'], 'JoliCode\\Slack\\Api\\Model\\ObjsFileShares', 'json', $context));
+            $object->setShares($this->denormalizer->denormalize($data['shares'], 'JoliCode\Slack\Api\Model\ObjsFileShares', 'json', $context));
         } elseif (\array_key_exists('shares', $data) && null === $data['shares']) {
             $object->setShares(null);
         }
@@ -702,8 +702,8 @@ class ObjsFileNormalizer implements DenormalizerInterface, NormalizerInterface, 
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsFile' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsFile' => false];
     }
 }

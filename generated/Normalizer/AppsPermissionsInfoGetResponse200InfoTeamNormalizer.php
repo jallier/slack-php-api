@@ -32,12 +32,12 @@ class AppsPermissionsInfoGetResponse200InfoTeamNormalizer implements Denormalize
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AppsPermissionsInfoGetResponse200InfoTeam' === $type;
+        return 'JoliCode\Slack\Api\Model\AppsPermissionsInfoGetResponse200InfoTeam' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AppsPermissionsInfoGetResponse200InfoTeam' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AppsPermissionsInfoGetResponse200InfoTeam' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -53,7 +53,7 @@ class AppsPermissionsInfoGetResponse200InfoTeamNormalizer implements Denormalize
             return $object;
         }
         if (\array_key_exists('resources', $data) && null !== $data['resources']) {
-            $object->setResources($this->denormalizer->denormalize($data['resources'], 'JoliCode\\Slack\\Api\\Model\\ObjsResources', 'json', $context));
+            $object->setResources($this->denormalizer->denormalize($data['resources'], 'JoliCode\Slack\Api\Model\ObjsResources', 'json', $context));
         } elseif (\array_key_exists('resources', $data) && null === $data['resources']) {
             $object->setResources(null);
         }
@@ -86,8 +86,8 @@ class AppsPermissionsInfoGetResponse200InfoTeamNormalizer implements Denormalize
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AppsPermissionsInfoGetResponse200InfoTeam' => false];
+        return ['JoliCode\Slack\Api\Model\AppsPermissionsInfoGetResponse200InfoTeam' => false];
     }
 }

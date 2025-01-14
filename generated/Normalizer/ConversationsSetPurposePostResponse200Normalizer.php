@@ -32,12 +32,12 @@ class ConversationsSetPurposePostResponse200Normalizer implements DenormalizerIn
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ConversationsSetPurposePostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\ConversationsSetPurposePostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ConversationsSetPurposePostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ConversationsSetPurposePostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -53,7 +53,7 @@ class ConversationsSetPurposePostResponse200Normalizer implements DenormalizerIn
             return $object;
         }
         if (\array_key_exists('channel', $data) && null !== $data['channel']) {
-            $object->setChannel($this->denormalizer->denormalize($data['channel'], 'JoliCode\\Slack\\Api\\Model\\ObjsConversation', 'json', $context));
+            $object->setChannel($this->denormalizer->denormalize($data['channel'], 'JoliCode\Slack\Api\Model\ObjsConversation', 'json', $context));
         } elseif (\array_key_exists('channel', $data) && null === $data['channel']) {
             $object->setChannel(null);
         }
@@ -78,8 +78,8 @@ class ConversationsSetPurposePostResponse200Normalizer implements DenormalizerIn
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ConversationsSetPurposePostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\ConversationsSetPurposePostResponse200' => false];
     }
 }

@@ -9794,6 +9794,227 @@
                 ]
             }
         },
+        "/assistant.threads.setStatus": {
+            "post": {
+                "consumes": [
+                    "application/json",
+                    "application/x-www-form-urlencoded"
+                ],
+                "description": "Set the status for an AI assistant thread.",
+                "externalDocs": {
+                    "description": "API method documentation",
+                    "url": "https://api.slack.com/methods/assistant.threads.setStatus"
+                },
+                "parameters": [
+                    {
+                        "description": "Channel ID containing the assistant thread",
+                        "in": "formData",
+                        "name": "channel_id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "Status of the specified bot user, e.g. 'is thinking...'",
+                        "in": "formData",
+                        "name": "status",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "Message timestamp of the thread of where to set the status.",
+                        "in": "formData",
+                        "name": "thread_ts",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "Authentication token. Requires scope: `assistant:write`",
+                        "in": "header",
+                        "name": "token",
+                        "type": "string"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "examples": {
+                            "application/json": {
+                                "ok": true
+                            }
+                        },
+                        "schema": {
+                            "additionalProperties": true,
+                            "description": "This method either only returns a brief _OK_ response or a verbose schema is not available for this method.",
+                            "properties": {
+                                "ok": {
+                                    "$ref": "#/definitions/defs_ok_true"
+                                }
+                            },
+                            "required": [
+                                "ok"
+                            ],
+                            "title": "Default success template",
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Typical error response",
+                        "examples": {
+                            "application/json": {
+                                "error": "invalid_auth",
+                                "ok": false
+                            }
+                        },
+                        "schema": {
+                            "additionalProperties": true,
+                            "description": "This method either only returns a brief _not OK_ response or a verbose schema is not available for this method.",
+                            "properties": {
+                                "ok": {
+                                    "$ref": "#/definitions/defs_ok_false"
+                                }
+                            },
+                            "required": [
+                                "ok"
+                            ],
+                            "title": "Default error template",
+                            "type": "object"
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "slackAuth": [
+                            "assistant:write"
+                        ]
+                    }
+                ],
+                "tags": [
+                    "assistant"
+                ]
+            }
+        },
+      "/assistant.threads.setSuggestedPrompts": {
+        "post": {
+          "consumes": [
+            "application/json",
+          ],
+          "description": "Set the status for an AI assistant thread.",
+          "externalDocs": {
+            "description": "API method documentation",
+            "url": "https://api.slack.com/methods/assistant.threads.setSuggestedPrompts"
+          },
+          "parameters": [
+            {
+              "description": "Channel ID containing the assistant thread",
+              "in": "body",
+              "name": "channel_id",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "description": "Each prompt should be supplied with its title and message attribute.",
+              "in": "body",
+              "name": "prompts",
+              "required": true,
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "description": "The title of the prompt.",
+                      "example": "Generate ideas"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "The content or message of the prompt.",
+                      "example": "Pretend you are a marketing associate and you need new ideas for an enterprise productivity feature. Generate 10 ideas for a new feature launch."
+                    }
+                  },
+                  "required": ["title", "message"]
+                }
+              }
+            },
+            {
+              "description": "Message timestamp of the thread of where to set the status.",
+              "in": "body",
+              "name": "thread_ts",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "description": "Authentication token. Requires scope: `assistant:write`",
+              "in": "header",
+              "name": "token",
+              "type": "string"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "examples": {
+                "application/json": {
+                  "ok": true
+                }
+              },
+              "schema": {
+                "additionalProperties": true,
+                "description": "This method either only returns a brief _OK_ response or a verbose schema is not available for this method.",
+                "properties": {
+                  "ok": {
+                    "$ref": "#/definitions/defs_ok_true"
+                  }
+                },
+                "required": [
+                  "ok"
+                ],
+                "title": "Default success template",
+                "type": "object"
+              }
+            },
+            "default": {
+              "description": "Typical error response",
+              "examples": {
+                "application/json": {
+                  "error": "invalid_auth",
+                  "ok": false
+                }
+              },
+              "schema": {
+                "additionalProperties": true,
+                "description": "This method either only returns a brief _not OK_ response or a verbose schema is not available for this method.",
+                "properties": {
+                  "ok": {
+                    "$ref": "#/definitions/defs_ok_false"
+                  }
+                },
+                "required": [
+                  "ok"
+                ],
+                "title": "Default error template",
+                "type": "object"
+              }
+            }
+          },
+          "security": [
+            {
+              "slackAuth": [
+                "assistant:write"
+              ]
+            }
+          ],
+          "tags": [
+            "assistant"
+          ]
+        }
+      },
         "/auth.revoke": {
             "get": {
                 "consumes": [

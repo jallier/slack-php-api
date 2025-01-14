@@ -32,12 +32,12 @@ class BotsInfoGetResponse200BotIconsNormalizer implements DenormalizerInterface,
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\BotsInfoGetResponse200BotIcons' === $type;
+        return 'JoliCode\Slack\Api\Model\BotsInfoGetResponse200BotIcons' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\BotsInfoGetResponse200BotIcons' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\BotsInfoGetResponse200BotIcons' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -84,8 +84,8 @@ class BotsInfoGetResponse200BotIconsNormalizer implements DenormalizerInterface,
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\BotsInfoGetResponse200BotIcons' => false];
+        return ['JoliCode\Slack\Api\Model\BotsInfoGetResponse200BotIcons' => false];
     }
 }

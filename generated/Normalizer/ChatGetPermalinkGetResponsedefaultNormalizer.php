@@ -32,12 +32,12 @@ class ChatGetPermalinkGetResponsedefaultNormalizer implements DenormalizerInterf
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ChatGetPermalinkGetResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\ChatGetPermalinkGetResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ChatGetPermalinkGetResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ChatGetPermalinkGetResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -86,8 +86,8 @@ class ChatGetPermalinkGetResponsedefaultNormalizer implements DenormalizerInterf
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ChatGetPermalinkGetResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\ChatGetPermalinkGetResponsedefault' => false];
     }
 }

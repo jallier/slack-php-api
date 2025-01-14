@@ -32,12 +32,12 @@ class RemindersCompletePostResponsedefaultNormalizer implements DenormalizerInte
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\RemindersCompletePostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\RemindersCompletePostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\RemindersCompletePostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\RemindersCompletePostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -86,8 +86,8 @@ class RemindersCompletePostResponsedefaultNormalizer implements DenormalizerInte
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\RemindersCompletePostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\RemindersCompletePostResponsedefault' => false];
     }
 }

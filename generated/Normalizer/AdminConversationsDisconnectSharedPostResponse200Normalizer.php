@@ -32,12 +32,12 @@ class AdminConversationsDisconnectSharedPostResponse200Normalizer implements Den
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminConversationsDisconnectSharedPostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminConversationsDisconnectSharedPostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminConversationsDisconnectSharedPostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminConversationsDisconnectSharedPostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -72,8 +72,8 @@ class AdminConversationsDisconnectSharedPostResponse200Normalizer implements Den
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminConversationsDisconnectSharedPostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\AdminConversationsDisconnectSharedPostResponse200' => false];
     }
 }

@@ -32,12 +32,12 @@ class FilesSharedPublicURLPostResponsedefaultNormalizer implements DenormalizerI
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\FilesSharedPublicURLPostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\FilesSharedPublicURLPostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\FilesSharedPublicURLPostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\FilesSharedPublicURLPostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -86,8 +86,8 @@ class FilesSharedPublicURLPostResponsedefaultNormalizer implements DenormalizerI
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\FilesSharedPublicURLPostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\FilesSharedPublicURLPostResponsedefault' => false];
     }
 }

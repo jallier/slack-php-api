@@ -32,12 +32,12 @@ class ObjsFileSharesNormalizer implements DenormalizerInterface, NormalizerInter
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsFileShares' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsFileShares' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsFileShares' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsFileShares' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -82,8 +82,8 @@ class ObjsFileSharesNormalizer implements DenormalizerInterface, NormalizerInter
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsFileShares' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsFileShares' => false];
     }
 }

@@ -32,12 +32,12 @@ class AdminConversationsSetConversationPrefsPostResponsedefaultNormalizer implem
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminConversationsSetConversationPrefsPostResponsedefault' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminConversationsSetConversationPrefsPostResponsedefault' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminConversationsSetConversationPrefsPostResponsedefault' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminConversationsSetConversationPrefsPostResponsedefault' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -78,8 +78,8 @@ class AdminConversationsSetConversationPrefsPostResponsedefaultNormalizer implem
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminConversationsSetConversationPrefsPostResponsedefault' => false];
+        return ['JoliCode\Slack\Api\Model\AdminConversationsSetConversationPrefsPostResponsedefault' => false];
     }
 }

@@ -32,12 +32,12 @@ class AppsPermissionsScopesListGetResponse200Normalizer implements DenormalizerI
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AppsPermissionsScopesListGetResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\AppsPermissionsScopesListGetResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AppsPermissionsScopesListGetResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AppsPermissionsScopesListGetResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -59,7 +59,7 @@ class AppsPermissionsScopesListGetResponse200Normalizer implements DenormalizerI
             $object->setOk(null);
         }
         if (\array_key_exists('scopes', $data) && null !== $data['scopes']) {
-            $object->setScopes($this->denormalizer->denormalize($data['scopes'], 'JoliCode\\Slack\\Api\\Model\\AppsPermissionsScopesListGetResponse200Scopes', 'json', $context));
+            $object->setScopes($this->denormalizer->denormalize($data['scopes'], 'JoliCode\Slack\Api\Model\AppsPermissionsScopesListGetResponse200Scopes', 'json', $context));
             unset($data['scopes']);
         } elseif (\array_key_exists('scopes', $data) && null === $data['scopes']) {
             $object->setScopes(null);
@@ -90,8 +90,8 @@ class AppsPermissionsScopesListGetResponse200Normalizer implements DenormalizerI
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AppsPermissionsScopesListGetResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\AppsPermissionsScopesListGetResponse200' => false];
     }
 }

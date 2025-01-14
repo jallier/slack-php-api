@@ -32,12 +32,12 @@ class UsersIdentityGetResponse200Item1Normalizer implements DenormalizerInterfac
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item1' === $type;
+        return 'JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item1' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item1' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item1' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,12 +58,12 @@ class UsersIdentityGetResponse200Item1Normalizer implements DenormalizerInterfac
             $object->setOk(null);
         }
         if (\array_key_exists('team', $data) && null !== $data['team']) {
-            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item1Team', 'json', $context));
+            $object->setTeam($this->denormalizer->denormalize($data['team'], 'JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item1Team', 'json', $context));
         } elseif (\array_key_exists('team', $data) && null === $data['team']) {
             $object->setTeam(null);
         }
         if (\array_key_exists('user', $data) && null !== $data['user']) {
-            $object->setUser($this->denormalizer->denormalize($data['user'], 'JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item1User', 'json', $context));
+            $object->setUser($this->denormalizer->denormalize($data['user'], 'JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item1User', 'json', $context));
         } elseif (\array_key_exists('user', $data) && null === $data['user']) {
             $object->setUser(null);
         }
@@ -84,8 +84,8 @@ class UsersIdentityGetResponse200Item1Normalizer implements DenormalizerInterfac
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\UsersIdentityGetResponse200Item1' => false];
+        return ['JoliCode\Slack\Api\Model\UsersIdentityGetResponse200Item1' => false];
     }
 }

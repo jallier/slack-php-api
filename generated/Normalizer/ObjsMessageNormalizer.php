@@ -32,12 +32,12 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ObjsMessage' === $type;
+        return 'JoliCode\Slack\Api\Model\ObjsMessage' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ObjsMessage' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ObjsMessage' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('attachments', $data) && null !== $data['attachments']) {
             $values = [];
             foreach ($data['attachments'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ObjsMessageAttachmentsItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ObjsMessageAttachmentsItem', 'json', $context);
             }
             $object->setAttachments($values);
         } elseif (\array_key_exists('attachments', $data) && null === $data['attachments']) {
@@ -64,7 +64,7 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('blocks', $data) && null !== $data['blocks']) {
             $values_1 = [];
             foreach ($data['blocks'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'JoliCode\\Slack\\Api\\Model\\BlocksItem', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'JoliCode\Slack\Api\Model\BlocksItem', 'json', $context);
             }
             $object->setBlocks($values_1);
         } elseif (\array_key_exists('blocks', $data) && null === $data['blocks']) {
@@ -76,7 +76,7 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setBotId(null);
         }
         if (\array_key_exists('bot_profile', $data) && null !== $data['bot_profile']) {
-            $object->setBotProfile($this->denormalizer->denormalize($data['bot_profile'], 'JoliCode\\Slack\\Api\\Model\\ObjsBotProfile', 'json', $context));
+            $object->setBotProfile($this->denormalizer->denormalize($data['bot_profile'], 'JoliCode\Slack\Api\Model\ObjsBotProfile', 'json', $context));
         } elseif (\array_key_exists('bot_profile', $data) && null === $data['bot_profile']) {
             $object->setBotProfile(null);
         }
@@ -86,7 +86,7 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setClientMsgId(null);
         }
         if (\array_key_exists('comment', $data) && null !== $data['comment']) {
-            $object->setComment($this->denormalizer->denormalize($data['comment'], 'JoliCode\\Slack\\Api\\Model\\ObjsComment', 'json', $context));
+            $object->setComment($this->denormalizer->denormalize($data['comment'], 'JoliCode\Slack\Api\Model\ObjsComment', 'json', $context));
         } elseif (\array_key_exists('comment', $data) && null === $data['comment']) {
             $object->setComment(null);
         }
@@ -96,21 +96,21 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setDisplayAsBot(null);
         }
         if (\array_key_exists('file', $data) && null !== $data['file']) {
-            $object->setFile($this->denormalizer->denormalize($data['file'], 'JoliCode\\Slack\\Api\\Model\\ObjsFile', 'json', $context));
+            $object->setFile($this->denormalizer->denormalize($data['file'], 'JoliCode\Slack\Api\Model\ObjsFile', 'json', $context));
         } elseif (\array_key_exists('file', $data) && null === $data['file']) {
             $object->setFile(null);
         }
         if (\array_key_exists('files', $data) && null !== $data['files']) {
             $values_2 = [];
             foreach ($data['files'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'JoliCode\\Slack\\Api\\Model\\ObjsFile', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'JoliCode\Slack\Api\Model\ObjsFile', 'json', $context);
             }
             $object->setFiles($values_2);
         } elseif (\array_key_exists('files', $data) && null === $data['files']) {
             $object->setFiles(null);
         }
         if (\array_key_exists('icons', $data) && null !== $data['icons']) {
-            $object->setIcons($this->denormalizer->denormalize($data['icons'], 'JoliCode\\Slack\\Api\\Model\\ObjsMessageIcons', 'json', $context));
+            $object->setIcons($this->denormalizer->denormalize($data['icons'], 'JoliCode\Slack\Api\Model\ObjsMessageIcons', 'json', $context));
         } elseif (\array_key_exists('icons', $data) && null === $data['icons']) {
             $object->setIcons(null);
         }
@@ -145,7 +145,7 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setLatestReply(null);
         }
         if (\array_key_exists('metadata', $data) && null !== $data['metadata']) {
-            $object->setMetadata($this->denormalizer->denormalize($data['metadata'], 'JoliCode\\Slack\\Api\\Model\\ObjsMetadata', 'json', $context));
+            $object->setMetadata($this->denormalizer->denormalize($data['metadata'], 'JoliCode\Slack\Api\Model\ObjsMetadata', 'json', $context));
         } elseif (\array_key_exists('metadata', $data) && null === $data['metadata']) {
             $object->setMetadata(null);
         }
@@ -186,7 +186,7 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (\array_key_exists('reactions', $data) && null !== $data['reactions']) {
             $values_4 = [];
             foreach ($data['reactions'] as $value_4) {
-                $values_4[] = $this->denormalizer->denormalize($value_4, 'JoliCode\\Slack\\Api\\Model\\ObjsReaction', 'json', $context);
+                $values_4[] = $this->denormalizer->denormalize($value_4, 'JoliCode\Slack\Api\Model\ObjsReaction', 'json', $context);
             }
             $object->setReactions($values_4);
         } elseif (\array_key_exists('reactions', $data) && null === $data['reactions']) {
@@ -272,7 +272,7 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
             $object->setUser(null);
         }
         if (\array_key_exists('user_profile', $data) && null !== $data['user_profile']) {
-            $object->setUserProfile($this->denormalizer->denormalize($data['user_profile'], 'JoliCode\\Slack\\Api\\Model\\ObjsUserProfileShort', 'json', $context));
+            $object->setUserProfile($this->denormalizer->denormalize($data['user_profile'], 'JoliCode\Slack\Api\Model\ObjsUserProfileShort', 'json', $context));
         } elseif (\array_key_exists('user_profile', $data) && null === $data['user_profile']) {
             $object->setUserProfile(null);
         }
@@ -444,8 +444,8 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ObjsMessage' => false];
+        return ['JoliCode\Slack\Api\Model\ObjsMessage' => false];
     }
 }

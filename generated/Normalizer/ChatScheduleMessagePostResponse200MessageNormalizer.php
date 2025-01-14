@@ -32,12 +32,12 @@ class ChatScheduleMessagePostResponse200MessageNormalizer implements Denormalize
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200Message' === $type;
+        return 'JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200Message' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200Message' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200Message' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -55,7 +55,7 @@ class ChatScheduleMessagePostResponse200MessageNormalizer implements Denormalize
         if (\array_key_exists('attachments', $data) && null !== $data['attachments']) {
             $values = [];
             foreach ($data['attachments'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200MessageAttachmentsItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200MessageAttachmentsItem', 'json', $context);
             }
             $object->setAttachments($values);
         } elseif (\array_key_exists('attachments', $data) && null === $data['attachments']) {
@@ -67,7 +67,7 @@ class ChatScheduleMessagePostResponse200MessageNormalizer implements Denormalize
             $object->setBotId(null);
         }
         if (\array_key_exists('bot_profile', $data) && null !== $data['bot_profile']) {
-            $object->setBotProfile($this->denormalizer->denormalize($data['bot_profile'], 'JoliCode\\Slack\\Api\\Model\\ObjsBotProfile', 'json', $context));
+            $object->setBotProfile($this->denormalizer->denormalize($data['bot_profile'], 'JoliCode\Slack\Api\Model\ObjsBotProfile', 'json', $context));
         } elseif (\array_key_exists('bot_profile', $data) && null === $data['bot_profile']) {
             $object->setBotProfile(null);
         }
@@ -136,8 +136,8 @@ class ChatScheduleMessagePostResponse200MessageNormalizer implements Denormalize
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200Message' => false];
+        return ['JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200Message' => false];
     }
 }

@@ -32,12 +32,12 @@ class AdminTeamsSettingsSetDefaultChannelsPostResponse200Normalizer implements D
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\AdminTeamsSettingsSetDefaultChannelsPostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDefaultChannelsPostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\AdminTeamsSettingsSetDefaultChannelsPostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDefaultChannelsPostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -83,8 +83,8 @@ class AdminTeamsSettingsSetDefaultChannelsPostResponse200Normalizer implements D
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\AdminTeamsSettingsSetDefaultChannelsPostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\AdminTeamsSettingsSetDefaultChannelsPostResponse200' => false];
     }
 }

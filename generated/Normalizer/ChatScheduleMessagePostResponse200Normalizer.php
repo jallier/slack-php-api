@@ -32,12 +32,12 @@ class ChatScheduleMessagePostResponse200Normalizer implements DenormalizerInterf
 
     public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
-        return 'JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200' === $type;
+        return 'JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200' === $type;
     }
 
     public function supportsNormalization($data, $format = null, array $context = []): bool
     {
-        return \is_object($data) && 'JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200' === \get_class($data);
+        return \is_object($data) && 'JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200' === \get_class($data);
     }
 
     public function denormalize($data, $class, $format = null, array $context = [])
@@ -58,7 +58,7 @@ class ChatScheduleMessagePostResponse200Normalizer implements DenormalizerInterf
             $object->setChannel(null);
         }
         if (\array_key_exists('message', $data) && null !== $data['message']) {
-            $object->setMessage($this->denormalizer->denormalize($data['message'], 'JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200Message', 'json', $context));
+            $object->setMessage($this->denormalizer->denormalize($data['message'], 'JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200Message', 'json', $context));
         } elseif (\array_key_exists('message', $data) && null === $data['message']) {
             $object->setMessage(null);
         }
@@ -108,8 +108,8 @@ class ChatScheduleMessagePostResponse200Normalizer implements DenormalizerInterf
         return $data;
     }
 
-    public function getSupportedTypes(string $format = null): array
+    public function getSupportedTypes(?string $format = null): array
     {
-        return ['JoliCode\\Slack\\Api\\Model\\ChatScheduleMessagePostResponse200' => false];
+        return ['JoliCode\Slack\Api\Model\ChatScheduleMessagePostResponse200' => false];
     }
 }
