@@ -2,7 +2,6 @@
 /vendor
 
 # Composer
-composer.lock
 composer.phar
 
 # CS
